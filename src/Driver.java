@@ -91,8 +91,8 @@ public class Driver {
         newHead.printListFromNode(newHead);
     }
 
-    public static LinkedList linkedListBuilder(int[] arr) {
-        LinkedList linkedList = new LinkedList<>();
+    public static LinkedList<Integer> linkedListBuilder(int[] arr) {
+        LinkedList<Integer> linkedList = new LinkedList<>();
         for (int i : arr) {
             linkedList.add(i);
         }

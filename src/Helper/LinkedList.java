@@ -79,7 +79,7 @@ public class LinkedList<T> {
         System.out.println();
     }
 
-    public LinkedListNode getHead(){
+    public LinkedListNode<T> getHead(){
         return head;
     }
 }
