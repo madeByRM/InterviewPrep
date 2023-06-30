@@ -12,12 +12,11 @@ public class DecodeString {
             char c = s.charAt(i);
 
             if (Character.isDigit(c)) {
-                StringBuilder num = new StringBuilder();
+                int count = 0;
                 while (Character.isDigit(s.charAt(i))) {
-                    num.append(c);
+                    count = count * 10 + (s.charAt(i) - '0');
                     i++;
                 }
-                int count = Integer.parseInt(num.toString());
                 countStack.push(count);
                 i--;
             } else if (c == '[') {
@@ -35,6 +34,5 @@ public class DecodeString {
             }
         }
         return decodedString;
-
     }
 }

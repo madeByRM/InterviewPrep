@@ -1,12 +1,7 @@
 import Helper.BinaryTree;
-import Helper.BinaryTreeNode;
 import Helper.LinkedList;
 import Helper.LinkedListNode;
 import Problems.*;
-
-import java.util.Arrays;
-import java.util.Arrays;
-import java.util.Comparator;
 
 public class Driver {
     public static void main(String[] args) {
@@ -33,6 +28,9 @@ public class Driver {
 
         /* Decode String: https://leetcode.com/problems/decode-string/ */
         decodeString();
+
+        /* Remove Duplicate From Sorted Linked List: Cracking the coding interview book */
+        removeDuplicateFromSortedLL();
     }
 
     public static void mergeTwoSortedLists() {
@@ -73,8 +71,24 @@ public class Driver {
     }
 
     public static void decodeString() {
-        String s = "3[a]2[bc]";
-        System.out.println("decodeString::Decoded: " + DecodeString.decodeString(s));
+        String s = "10[rm]";
+        String out = DecodeString.decodeString(s);
+        System.out.println("decodeString::Decoded: " + out);
+        int count = 0;
+        for (char c : out.toCharArray()) {
+            if (c == 'r') {
+                count++;
+            }
+        }
+        System.out.println("Count: " +count);
+    }
+
+    public static void removeDuplicateFromSortedLL() {
+        LinkedList<Integer> list = linkedListBuilder(new int[]{1, 2, 4, 4, 5, 6, 6});
+        RemoveDuplicatesLL.removeDuplicatesFromUnsortedLinkedList(list.getHead());
+        System.out.print("removeDuplicateFromSortedLL::New List: ");
+        LinkedListNode<Integer> newHead = list.getHead();
+        newHead.printListFromNode(newHead);
     }
 
     public static LinkedList linkedListBuilder(int[] arr) {
