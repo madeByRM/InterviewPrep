@@ -19,4 +19,19 @@ public class RemoveDuplicatesLL {
             head = head.next;
         }
     }
+
+    public static void removeDuplicatesFromUnsortedLlWithoutBuffer(LinkedListNode<Integer> head) {
+        LinkedListNode<Integer> curr = head;
+        while (curr != null) {
+            LinkedListNode<Integer> fast = curr;
+            while (fast.next != null) {
+                if (fast.next.value == curr.value) {
+                    fast.next = fast.next.next;
+                } else {
+                    fast = fast.next;
+                }
+            }
+            curr = curr.next;
+        }
+    }
 }
