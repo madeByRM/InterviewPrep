@@ -31,6 +31,9 @@ public class Driver {
 
         /* Remove Duplicate From Sorted Linked List: Cracking the coding interview book */
         removeDuplicateFromSortedLL();
+
+        /* Remove Nth Element From Last In Linked List: Cracking the coding interview book */
+        removeNthFromLastLL();
     }
 
     public static void mergeTwoSortedLists() {
@@ -88,6 +91,13 @@ public class Driver {
         RemoveDuplicatesLL.removeDuplicatesFromUnsortedLinkedList(list.getHead());
         System.out.print("removeDuplicateFromSortedLL::New List: ");
         LinkedListNode<Integer> newHead = list.getHead();
+        newHead.printListFromNode(newHead);
+    }
+
+    public static void removeNthFromLastLL() {
+        LinkedList<Integer> list = linkedListBuilder(new int[]{1, 2, 3, 4, 5, 6, 7, 8});
+        LinkedListNode<Integer> newHead = RemoveNthFromLast.removeNthFromLast(list.getHead(), 2);
+        System.out.print("removeNthFromLastLL::New List: ");
         newHead.printListFromNode(newHead);
     }
 
