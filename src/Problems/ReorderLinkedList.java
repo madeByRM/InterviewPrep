@@ -2,8 +2,6 @@ package Problems;
 
 import Helper.LinkedListNode;
 
-import java.util.List;
-
 public class ReorderLinkedList {
     public static void reorderLinkedList(LinkedListNode<Integer> head) {
         if (head == null) {
@@ -22,7 +20,7 @@ public class ReorderLinkedList {
         // reverse list from middle
         LinkedListNode<Integer> prev = null;
         LinkedListNode<Integer> curr = slow;
-        LinkedListNode<Integer> next = null;
+        LinkedListNode<Integer> next;
 
         while (curr != null) {
             next = curr.next;
@@ -34,7 +32,7 @@ public class ReorderLinkedList {
         LinkedListNode<Integer> first = head;
         LinkedListNode<Integer> second = prev;
 
-        while (second.next != null) {
+        while (second!= null && second.next != null) {
             next = first.next;
             first.next = second;
             first = next;
