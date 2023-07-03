@@ -34,6 +34,12 @@ public class Driver {
 
         /* Remove Nth Element From Last In Linked List: Cracking the coding interview book */
         removeNthFromLastLL();
+
+        /* 206. Reverse Linked List: https://leetcode.com/problems/reverse-linked-list/ */
+        reverseLinkedList();
+
+        /* 143. Reorder List: https://leetcode.com/problems/reorder-list/ */
+        reorderLinkedList();
     }
 
     public static void mergeTwoSortedLists() {
@@ -99,6 +105,20 @@ public class Driver {
         LinkedListNode<Integer> newHead = RemoveNthFromLast.removeNthFromLast(list.getHead(), 2);
         System.out.print("removeNthFromLastLL::New List: ");
         newHead.printListFromNode(newHead);
+    }
+
+    public static void reverseLinkedList() {
+        LinkedList<Integer> list = linkedListBuilder(new int[]{1, 2, 3, 4, 5, 6, 7, 8});
+        LinkedListNode<Integer> reverseHead = ReverseLinkedList.reverseLinkedList(list.getHead());
+        System.out.print("reverseLinkedList::Reversed List: ");
+        reverseHead.printListFromNode(reverseHead);
+    }
+
+    public static void reorderLinkedList() {
+        LinkedList<Integer> list = linkedListBuilder(new int[]{1, 2, 3, 4, 5});
+        ReorderLinkedList.reorderLinkedList(list.getHead());
+        System.out.print("reorderLinkedList::Reordered List: ");
+        (list.getHead()).printListFromNode(list.getHead());
     }
 
     public static LinkedList<Integer> linkedListBuilder(int[] arr) {
