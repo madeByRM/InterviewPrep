@@ -40,6 +40,9 @@ public class Driver {
 
         /* 143. Reorder List: https://leetcode.com/problems/reorder-list/ */
         reorderLinkedList();
+
+        /* 234. Palindrome Linked List: https://leetcode.com/problems/palindrome-linked-list/ */
+        isPalindromeLL();
     }
 
     public static void mergeTwoSortedLists() {
@@ -119,6 +122,11 @@ public class Driver {
         ReorderLinkedList.reorderLinkedList(list.getHead());
         System.out.print("reorderLinkedList::Reordered List: ");
         (list.getHead()).printListFromNode(list.getHead());
+    }
+
+    public static void isPalindromeLL() {
+        LinkedList<Integer> list = linkedListBuilder(new int[]{1, 1, 1, 1});
+        System.out.print("isPalindromeLL::isPalindrome: " + PalindromeLinkedList.isPalindromeLL(list.getHead()));
     }
 
     public static LinkedList<Integer> linkedListBuilder(int[] arr) {
