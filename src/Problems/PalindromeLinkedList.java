@@ -11,7 +11,7 @@ public class PalindromeLinkedList {
     private static LinkedListNode<Integer> reverseAndClone(LinkedListNode<Integer> head) {
         LinkedListNode<Integer> newHead = null;
         while (head != null) {
-            LinkedListNode<Integer> n = new LinkedListNode<Integer>(head.value);
+            LinkedListNode<Integer> n = new LinkedListNode<>(head.value);
             n.next = newHead;
             newHead = n;
             head = head.next;
