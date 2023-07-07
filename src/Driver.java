@@ -47,6 +47,9 @@ public class Driver {
 
         /* Check for Binary Tree is SumTree: https://www.geeksforgeeks.org/check-if-a-given-binary-tree-is-sumtree/ */
         isSumTree();
+
+        /* Binary Tree cousin nodes: https://www.geeksforgeeks.org/check-two-nodes-cousins-binary-tree/ */
+        areNodesCousins();
     }
 
     public static void mergeTwoSortedLists() {
@@ -165,6 +168,24 @@ public class Driver {
         tree.root.left.right = new BinaryTreeNode(6);
         tree.root.right.right = new BinaryTreeNode(3);
         System.out.println("isSumTree::isSumTree: " + BinarySumTree.isSumTree(tree.getRoot()));
+    }
+
+    public static void areNodesCousins() {
+        BinaryTree tree = new BinaryTree();
+        tree.root = new BinaryTreeNode(1);
+        tree.root.left = new BinaryTreeNode(2);
+        tree.root.right = new BinaryTreeNode(3);
+        tree.root.left.left = new BinaryTreeNode(4);
+        tree.root.left.right = new BinaryTreeNode(5);
+        tree.root.left.right.right = new BinaryTreeNode(15);
+        tree.root.right.left = new BinaryTreeNode(6);
+        tree.root.right.right = new BinaryTreeNode(7);
+        tree.root.right.left.right = new BinaryTreeNode(8);
+
+        BinaryTreeNode node1, node2;
+        node1 = tree.root.left.left;
+        node2 = tree.root.right.right;
+        System.out.println("areNodesCousins::Cousins: " + BinaryTreeCousinNodes.areCousins(tree.getRoot(), node1, node2));
     }
 
     public static LinkedList<Integer> linkedListBuilder(int[] arr) {
