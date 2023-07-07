@@ -1,4 +1,5 @@
 import Helper.BinaryTree;
+import Helper.BinaryTreeNode;
 import Helper.LinkedList;
 import Helper.LinkedListNode;
 import Problems.*;
@@ -24,7 +25,7 @@ public class Driver {
         invertBinaryTree();
 
         /* Balanced Binary Tree: https://leetcode.com/problems/balanced-binary-tree/ */
-        // balancedBinaryTree();
+        balancedBinaryTree();
 
         /* Decode String: https://leetcode.com/problems/decode-string/ */
         decodeString();
@@ -76,10 +77,33 @@ public class Driver {
     }
 
     public static void invertBinaryTree() {
-        BinaryTree binaryTree = binaryTreeBuilder(new int[] {4,2,7,1,3,6,9});
+        BinaryTree binaryTree = new BinaryTree();
+        binaryTree.insert(4);
+        binaryTree.insert(2);
+        binaryTree.insert(7);
+        binaryTree.insert(1);
+        binaryTree.insert(3);
+        binaryTree.insert(6);
+        binaryTree.insert(9);
+        System.out.println("invertBinaryTree::Input");
+        binaryTree.printTree();
         InvertBinaryTree ibt = new InvertBinaryTree();
         ibt.invertTree(binaryTree.getRoot());
+        System.out.println("invertBinaryTree::Output");
         binaryTree.printTree();
+    }
+
+    public static void balancedBinaryTree() {
+        BinaryTree binaryTree = new BinaryTree();
+        binaryTree.root = new BinaryTreeNode(3);
+        binaryTree.root.left = new BinaryTreeNode(9);
+        binaryTree.root.right = new BinaryTreeNode(20);
+        binaryTree.root.right.left = new BinaryTreeNode(15);
+        binaryTree.root.right.right = new BinaryTreeNode(7);
+        binaryTree.root.right.right.right = new BinaryTreeNode(5);
+        System.out.println("balancedBinaryTree::Input");
+        binaryTree.printTree();
+        System.out.println("balancedBinaryTree::isBalanced: " + BalancedBinaryTree.isBalanced(binaryTree.getRoot()));
     }
 
     public static void decodeString() {
@@ -135,14 +159,6 @@ public class Driver {
             linkedList.add(i);
         }
         return linkedList;
-    }
-
-    public static BinaryTree binaryTreeBuilder(int[] arr){
-        BinaryTree binaryTree = new BinaryTree();
-        for (int i : arr) {
-            binaryTree.insert(i);
-        }
-        return binaryTree;
     }
 
 }

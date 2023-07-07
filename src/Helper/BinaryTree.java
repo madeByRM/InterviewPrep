@@ -4,11 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BinaryTree {
-    BinaryTreeNode root;
+    public BinaryTreeNode root;
 
     public BinaryTree() {
         root = null;
     }
+
+    public BinaryTree(int data) { root = new BinaryTreeNode((data)); }
 
     public void insert(int data) {
         root = insertNode(root, data);
