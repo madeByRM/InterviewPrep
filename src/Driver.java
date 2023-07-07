@@ -44,6 +44,9 @@ public class Driver {
 
         /* 234. Palindrome Linked List: https://leetcode.com/problems/palindrome-linked-list/ */
         isPalindromeLL();
+
+        /* Check for Binary Tree is SumTree: https://www.geeksforgeeks.org/check-if-a-given-binary-tree-is-sumtree/ */
+        isSumTree();
     }
 
     public static void mergeTwoSortedLists() {
@@ -73,7 +76,7 @@ public class Driver {
 
     public static void binarySearch() {
         BinarySearch b1 = new BinarySearch();
-        System.out.println("binarySearch::Result: " + b1.search(new int[] {-1,0,3,5,9,12}, 9));
+        System.out.println("binarySearch::Result: " + b1.search(new int[]{-1, 0, 3, 5, 9, 12}, 9));
     }
 
     public static void invertBinaryTree() {
@@ -116,7 +119,7 @@ public class Driver {
                 count++;
             }
         }
-        System.out.println("Count: " +count);
+        System.out.println("Count: " + count);
     }
 
     public static void removeDuplicateFromSortedLL() {
@@ -151,6 +154,17 @@ public class Driver {
     public static void isPalindromeLL() {
         LinkedList<Integer> list = linkedListBuilder(new int[]{1, 1, 1, 1});
         System.out.print("isPalindromeLL::isPalindrome: " + PalindromeLinkedList.isPalindromeLL(list.getHead()));
+    }
+
+    public static void isSumTree() {
+        BinaryTree tree = new BinaryTree();
+        tree.root = new BinaryTreeNode(26);
+        tree.root.left = new BinaryTreeNode(10);
+        tree.root.right = new BinaryTreeNode(3);
+        tree.root.left.left = new BinaryTreeNode(4);
+        tree.root.left.right = new BinaryTreeNode(6);
+        tree.root.right.right = new BinaryTreeNode(3);
+        System.out.println("isSumTree::isSumTree: " + BinarySumTree.isSumTree(tree.getRoot()));
     }
 
     public static LinkedList<Integer> linkedListBuilder(int[] arr) {
