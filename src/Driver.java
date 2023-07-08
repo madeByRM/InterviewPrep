@@ -50,6 +50,9 @@ public class Driver {
 
         /* Binary Tree cousin nodes: https://www.geeksforgeeks.org/check-two-nodes-cousins-binary-tree/ */
         areNodesCousins();
+
+        /* Binary Tree Max Path Sum: https://www.geeksforgeeks.org/find-maximum-path-sum-in-a-binary-tree/ */
+        maximumPathSumBT();
     }
 
     public static void mergeTwoSortedLists() {
@@ -186,6 +189,20 @@ public class Driver {
         node1 = tree.root.left.left;
         node2 = tree.root.right.right;
         System.out.println("areNodesCousins::Cousins: " + BinaryTreeCousinNodes.areCousins(tree.getRoot(), node1, node2));
+    }
+
+    public static void maximumPathSumBT() {
+        BinaryTree tree = new BinaryTree();
+        tree.root = new BinaryTreeNode(10);
+        tree.root.left = new BinaryTreeNode(2);
+        tree.root.right = new BinaryTreeNode(10);
+        tree.root.left.left = new BinaryTreeNode(20);
+        tree.root.left.right = new BinaryTreeNode(1);
+        tree.root.right.right = new BinaryTreeNode(-25);
+        tree.root.right.right.left = new BinaryTreeNode(3);
+        tree.root.right.right.right = new BinaryTreeNode(4);
+
+        System.out.println("maximumPathSumBT::maxSum: " + MaximumPathSumBT.maxSum(tree.getRoot()));
     }
 
     public static LinkedList<Integer> linkedListBuilder(int[] arr) {
