@@ -1,10 +1,10 @@
 package Helper;
 
-public class LinkedList<T> {
+public class CustomLinkedList<T> {
     private LinkedListNode<T> head;
     private int size;
 
-    public LinkedList() {
+    public CustomLinkedList() {
         this.head = null;
         this.size = 0;
     }

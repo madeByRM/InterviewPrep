@@ -1,6 +1,6 @@
 import Helper.BinaryTree;
 import Helper.BinaryTreeNode;
-import Helper.LinkedList;
+import Helper.CustomLinkedList;
 import Helper.LinkedListNode;
 import Problems.*;
 
@@ -53,11 +53,21 @@ public class Driver {
 
         /* Binary Tree Max Path Sum: https://www.geeksforgeeks.org/find-maximum-path-sum-in-a-binary-tree/ */
         maximumPathSumBT();
+
+        /* 104. Maximum Depth of Binary Tree: https://leetcode.com/problems/maximum-depth-of-binary-tree/ */
+        maximumDepthBT();
+
+        /* 100. Same Tree: https://leetcode.com/problems/same-tree/ */
+        sameTree();
+
+        /* 572. Subtree of Another Tree: https://leetcode.com/problems/subtree-of-another-tree/ */
+        isSubtree();
+
     }
 
     public static void mergeTwoSortedLists() {
-        LinkedList<Integer> list1 = linkedListBuilder(new int[]{1, 2, 4});
-        LinkedList<Integer> list2 = linkedListBuilder(new int[]{1, 3, 4});
+        CustomLinkedList<Integer> list1 = linkedListBuilder(new int[]{1, 2, 4});
+        CustomLinkedList<Integer> list2 = linkedListBuilder(new int[]{1, 3, 4});
         MergeTwoSortedLists mergeTwoSortedLists = new MergeTwoSortedLists();
         LinkedListNode<Integer> ans = mergeTwoSortedLists.mergeTwoLists(list1.getHead(), list2.getHead());
         System.out.print("mergeTwoSortedLists::Merged List: ");
@@ -129,7 +139,7 @@ public class Driver {
     }
 
     public static void removeDuplicateFromSortedLL() {
-        LinkedList<Integer> list = linkedListBuilder(new int[]{1, 2, 4, 4, 5, 6, 6});
+        CustomLinkedList<Integer> list = linkedListBuilder(new int[]{1, 2, 4, 4, 5, 6, 6});
         RemoveDuplicatesLL.removeDuplicatesFromUnsortedLinkedList(list.getHead());
         System.out.print("removeDuplicateFromSortedLL::New List: ");
         LinkedListNode<Integer> newHead = list.getHead();
@@ -137,43 +147,77 @@ public class Driver {
     }
 
     public static void removeNthFromLastLL() {
-        LinkedList<Integer> list = linkedListBuilder(new int[]{1, 2, 3, 4, 5, 6, 7, 8});
+        CustomLinkedList<Integer> list = linkedListBuilder(new int[]{1, 2, 3, 4, 5, 6, 7, 8});
         LinkedListNode<Integer> newHead = RemoveNthFromLast.removeNthFromLast(list.getHead(), 2);
         System.out.print("removeNthFromLastLL::New List: ");
         newHead.printListFromNode(newHead);
     }
 
     public static void reverseLinkedList() {
-        LinkedList<Integer> list = linkedListBuilder(new int[]{1, 2, 3, 4, 5, 6, 7, 8});
+        CustomLinkedList<Integer> list = linkedListBuilder(new int[]{1, 2, 3, 4, 5, 6, 7, 8});
         LinkedListNode<Integer> reverseHead = ReverseLinkedList.reverseLinkedList(list.getHead());
         System.out.print("reverseLinkedList::Reversed List: ");
         reverseHead.printListFromNode(reverseHead);
     }
 
     public static void reorderLinkedList() {
-        LinkedList<Integer> list = linkedListBuilder(new int[]{1, 2, 3, 4, 5});
+        CustomLinkedList<Integer> list = linkedListBuilder(new int[]{1, 2, 3, 4, 5});
         ReorderLinkedList.reorderLinkedList(list.getHead());
         System.out.print("reorderLinkedList::Reordered List: ");
         (list.getHead()).printListFromNode(list.getHead());
     }
 
     public static void isPalindromeLL() {
-        LinkedList<Integer> list = linkedListBuilder(new int[]{1, 1, 1, 1});
+        CustomLinkedList<Integer> list = linkedListBuilder(new int[]{1, 1, 1, 1});
         System.out.print("isPalindromeLL::isPalindrome: " + PalindromeLinkedList.isPalindromeLL(list.getHead()));
     }
 
     public static void isSumTree() {
-        BinaryTree tree = new BinaryTree();
-        tree.root = new BinaryTreeNode(26);
-        tree.root.left = new BinaryTreeNode(10);
-        tree.root.right = new BinaryTreeNode(3);
-        tree.root.left.left = new BinaryTreeNode(4);
-        tree.root.left.right = new BinaryTreeNode(6);
-        tree.root.right.right = new BinaryTreeNode(3);
+        BinaryTree tree = binaryTreeBuilder();
         System.out.println("isSumTree::isSumTree: " + BinarySumTree.isSumTree(tree.getRoot()));
     }
 
     public static void areNodesCousins() {
+        BinaryTree tree = binaryTreeBuilder();
+        BinaryTreeNode node1, node2;
+        node1 = tree.root.left.left;
+        node2 = tree.root.right.right;
+        System.out.println("areNodesCousins::Cousins: " + BinaryTreeCousinNodes.areCousins(tree.getRoot(), node1, node2));
+    }
+
+    public static void maximumPathSumBT() {
+        BinaryTree tree = binaryTreeBuilder();
+        System.out.println("maximumPathSumBT::maxSum: " + MaximumPathSumBT.maxSum(tree.getRoot()));
+    }
+
+    private static void maximumDepthBT() {
+        BinaryTree tree = binaryTreeBuilder();
+        System.out.println("maximumDepthBT::maxDepth: " + MaximumDepthBT.maxDepth(tree.getRoot()));
+    }
+
+    private static void sameTree() {
+        BinaryTree tree = binaryTreeBuilder();
+        BinaryTree tree2 = binaryTreeBuilder();
+        tree.root.right.left.right.left = new BinaryTreeNode(9);
+        System.out.println("sameTree::same: " + SameTree.areTreesSame(tree.getRoot(), tree2.getRoot()));
+    }
+
+    private static void isSubtree() {
+        BinaryTree tree = binaryTreeBuilder();
+        BinaryTree tree2 = binaryTreeBuilder();
+        tree.root.right.left.right.left = new BinaryTreeNode(9);
+        System.out.println("isSubtree::subTree: " + SubtreeOfAnotherTree.isSubtree(tree.getRoot(), tree2.getRoot()));
+    }
+
+    public static CustomLinkedList<Integer> linkedListBuilder(int[] arr) {
+        CustomLinkedList<Integer> customLinkedList = new CustomLinkedList<>();
+        for (int i : arr) {
+            customLinkedList.add(i);
+        }
+        return customLinkedList;
+    }
+
+    public static BinaryTree binaryTreeBuilder() {
         BinaryTree tree = new BinaryTree();
         tree.root = new BinaryTreeNode(1);
         tree.root.left = new BinaryTreeNode(2);
@@ -185,32 +229,7 @@ public class Driver {
         tree.root.right.right = new BinaryTreeNode(7);
         tree.root.right.left.right = new BinaryTreeNode(8);
 
-        BinaryTreeNode node1, node2;
-        node1 = tree.root.left.left;
-        node2 = tree.root.right.right;
-        System.out.println("areNodesCousins::Cousins: " + BinaryTreeCousinNodes.areCousins(tree.getRoot(), node1, node2));
-    }
-
-    public static void maximumPathSumBT() {
-        BinaryTree tree = new BinaryTree();
-        tree.root = new BinaryTreeNode(10);
-        tree.root.left = new BinaryTreeNode(2);
-        tree.root.right = new BinaryTreeNode(10);
-        tree.root.left.left = new BinaryTreeNode(20);
-        tree.root.left.right = new BinaryTreeNode(1);
-        tree.root.right.right = new BinaryTreeNode(-25);
-        tree.root.right.right.left = new BinaryTreeNode(3);
-        tree.root.right.right.right = new BinaryTreeNode(4);
-
-        System.out.println("maximumPathSumBT::maxSum: " + MaximumPathSumBT.maxSum(tree.getRoot()));
-    }
-
-    public static LinkedList<Integer> linkedListBuilder(int[] arr) {
-        LinkedList<Integer> linkedList = new LinkedList<>();
-        for (int i : arr) {
-            linkedList.add(i);
-        }
-        return linkedList;
+        return tree;
     }
 
 }
