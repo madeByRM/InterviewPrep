@@ -63,6 +63,12 @@ public class Driver {
         /* 572. Subtree of Another Tree: https://leetcode.com/problems/subtree-of-another-tree/ */
         isSubtree();
 
+        /* 235. Lowest Common Ancestor of a Binary Search Tree: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/ */
+        getLCAofBST();
+
+        /* 236. Lowest Common Ancestor of a Binary Tree: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree */
+        getLCAofBT();
+
     }
 
     public static void mergeTwoSortedLists() {
@@ -96,14 +102,7 @@ public class Driver {
     }
 
     public static void invertBinaryTree() {
-        BinaryTree binaryTree = new BinaryTree();
-        binaryTree.insert(4);
-        binaryTree.insert(2);
-        binaryTree.insert(7);
-        binaryTree.insert(1);
-        binaryTree.insert(3);
-        binaryTree.insert(6);
-        binaryTree.insert(9);
+        BinaryTree binaryTree = binaryTreeBuilder();
         System.out.println("invertBinaryTree::Input");
         binaryTree.printTree();
         InvertBinaryTree ibt = new InvertBinaryTree();
@@ -113,13 +112,7 @@ public class Driver {
     }
 
     public static void balancedBinaryTree() {
-        BinaryTree binaryTree = new BinaryTree();
-        binaryTree.root = new BinaryTreeNode(3);
-        binaryTree.root.left = new BinaryTreeNode(9);
-        binaryTree.root.right = new BinaryTreeNode(20);
-        binaryTree.root.right.left = new BinaryTreeNode(15);
-        binaryTree.root.right.right = new BinaryTreeNode(7);
-        binaryTree.root.right.right.right = new BinaryTreeNode(5);
+        BinaryTree binaryTree = binaryTreeBuilder();
         System.out.println("balancedBinaryTree::Input");
         binaryTree.printTree();
         System.out.println("balancedBinaryTree::isBalanced: " + BalancedBinaryTree.isBalanced(binaryTree.getRoot()));
@@ -209,6 +202,30 @@ public class Driver {
         System.out.println("isSubtree::subTree: " + SubtreeOfAnotherTree.isSubtree(tree.getRoot(), tree2.getRoot()));
     }
 
+    private static void getLCAofBST() {
+        BinaryTree bst = binarySearchTreeBuilder();
+        BinaryTreeNode n1 = new BinaryTreeNode(2);
+        BinaryTreeNode n2 = new BinaryTreeNode(4);
+        System.out.println("getLCAofBST::LCA: " + (LCAofBST.lowestCommonAncestor(bst.getRoot(), n1, n2)).val);
+    }
+
+    private static void getLCAofBT() {
+        BinaryTree tree = new BinaryTree();
+        tree.root = new BinaryTreeNode(3);
+        tree.root.left = new BinaryTreeNode(5);
+        tree.root.right = new BinaryTreeNode(1);
+        tree.root.left.left = new BinaryTreeNode(6);
+        tree.root.left.right = new BinaryTreeNode(2);
+        tree.root.right.left = new BinaryTreeNode(0);
+        tree.root.right.right = new BinaryTreeNode(8);
+        tree.root.left.right.left = new BinaryTreeNode(7);
+        tree.root.left.right.right = new BinaryTreeNode(4);
+
+        BinaryTreeNode n1 = new BinaryTreeNode(5);
+        BinaryTreeNode n2 = new BinaryTreeNode(4);
+        System.out.println("getLCAofBT::LCA: " + (LCAofBT.LCAofBToptimum(tree.getRoot(), n1, n2)).val);
+    }
+
     public static CustomLinkedList<Integer> linkedListBuilder(int[] arr) {
         CustomLinkedList<Integer> customLinkedList = new CustomLinkedList<>();
         for (int i : arr) {
@@ -228,6 +245,21 @@ public class Driver {
         tree.root.right.left = new BinaryTreeNode(6);
         tree.root.right.right = new BinaryTreeNode(7);
         tree.root.right.left.right = new BinaryTreeNode(8);
+
+        return tree;
+    }
+
+    public static BinaryTree binarySearchTreeBuilder() {
+        BinaryTree tree = new BinaryTree();
+        tree.root = new BinaryTreeNode(6);
+        tree.root.left = new BinaryTreeNode(2);
+        tree.root.right = new BinaryTreeNode(8);
+        tree.root.left.left = new BinaryTreeNode(0);
+        tree.root.left.right = new BinaryTreeNode(4);
+        tree.root.left.right.left = new BinaryTreeNode(3);
+        tree.root.left.right.right = new BinaryTreeNode(5);
+        tree.root.right.left = new BinaryTreeNode(7);
+        tree.root.right.right = new BinaryTreeNode(9);
 
         return tree;
     }
