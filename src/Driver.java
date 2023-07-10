@@ -69,6 +69,9 @@ public class Driver {
         /* 236. Lowest Common Ancestor of a Binary Tree: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree */
         getLCAofBT();
 
+        /* 102. Binary Tree Level Order Traversal: https://leetcode.com/problems/binary-tree-level-order-traversal/ */
+        traverseLevelOrderBT();
+
     }
 
     public static void mergeTwoSortedLists() {
@@ -183,33 +186,33 @@ public class Driver {
         System.out.println("maximumPathSumBT::maxSum: " + MaximumPathSumBT.maxSum(tree.getRoot()));
     }
 
-    private static void maximumDepthBT() {
+    public static void maximumDepthBT() {
         BinaryTree tree = binaryTreeBuilder();
         System.out.println("maximumDepthBT::maxDepth: " + MaximumDepthBT.maxDepth(tree.getRoot()));
     }
 
-    private static void sameTree() {
+    public static void sameTree() {
         BinaryTree tree = binaryTreeBuilder();
         BinaryTree tree2 = binaryTreeBuilder();
         tree.root.right.left.right.left = new BinaryTreeNode(9);
         System.out.println("sameTree::same: " + SameTree.areTreesSame(tree.getRoot(), tree2.getRoot()));
     }
 
-    private static void isSubtree() {
+    public static void isSubtree() {
         BinaryTree tree = binaryTreeBuilder();
         BinaryTree tree2 = binaryTreeBuilder();
         tree.root.right.left.right.left = new BinaryTreeNode(9);
         System.out.println("isSubtree::subTree: " + SubtreeOfAnotherTree.isSubtree(tree.getRoot(), tree2.getRoot()));
     }
 
-    private static void getLCAofBST() {
+    public static void getLCAofBST() {
         BinaryTree bst = binarySearchTreeBuilder();
         BinaryTreeNode n1 = new BinaryTreeNode(2);
         BinaryTreeNode n2 = new BinaryTreeNode(4);
         System.out.println("getLCAofBST::LCA: " + (LCAofBST.lowestCommonAncestor(bst.getRoot(), n1, n2)).val);
     }
 
-    private static void getLCAofBT() {
+    public static void getLCAofBT() {
         BinaryTree tree = new BinaryTree();
         tree.root = new BinaryTreeNode(3);
         tree.root.left = new BinaryTreeNode(5);
@@ -224,6 +227,11 @@ public class Driver {
         BinaryTreeNode n1 = new BinaryTreeNode(5);
         BinaryTreeNode n2 = new BinaryTreeNode(4);
         System.out.println("getLCAofBT::LCA: " + (LCAofBT.LCAofBToptimum(tree.getRoot(), n1, n2)).val);
+    }
+
+    public static void traverseLevelOrderBT() {
+        BinaryTree tree = binaryTreeBuilder();
+        System.out.println("traverseLevelOrderBT::out: " + (BinaryTreeLevelOrder.traverse(tree.getRoot())).toString());
     }
 
     public static CustomLinkedList<Integer> linkedListBuilder(int[] arr) {
