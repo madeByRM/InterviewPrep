@@ -1,6 +1,5 @@
 package Problems;
 
-import Helper.BinaryTree;
 import Helper.BinaryTreeNode;
 
 import java.util.ArrayList;

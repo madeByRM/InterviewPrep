@@ -72,6 +72,9 @@ public class Driver {
         /* 102. Binary Tree Level Order Traversal: https://leetcode.com/problems/binary-tree-level-order-traversal/ */
         traverseLevelOrderBT();
 
+        /* 98. Validate Binary Search Tree: https://leetcode.com/problems/validate-binary-search-tree/ */
+        validateBST();
+
     }
 
     public static void mergeTwoSortedLists() {
@@ -232,6 +235,11 @@ public class Driver {
     public static void traverseLevelOrderBT() {
         BinaryTree tree = binaryTreeBuilder();
         System.out.println("traverseLevelOrderBT::out: " + (BinaryTreeLevelOrder.traverse(tree.getRoot())).toString());
+    }
+
+    public static void validateBST() {
+        BinaryTree bst = binarySearchTreeBuilder();
+        System.out.println("validateBST::isBST: " + ValidateBST.isValidBST(bst.getRoot()));
     }
 
     public static CustomLinkedList<Integer> linkedListBuilder(int[] arr) {
