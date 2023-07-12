@@ -78,6 +78,9 @@ public class Driver {
         /* 105. Construct Binary Tree from Preorder and Inorder Traversal: https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/ */
         constructBTfromPreInorderTraversal();
 
+        /* 261. Graph Valid Tree: https://leetcode.com/problems/graph-valid-tree/ */
+        validateGraphIsTree();
+
     }
 
     public static void mergeTwoSortedLists() {
@@ -237,7 +240,7 @@ public class Driver {
 
     public static void traverseLevelOrderBT() {
         BinaryTree tree = binaryTreeBuilder();
-        System.out.println("traverseLevelOrderBT::out: " + (BinaryTreeLevelOrder.traverse(tree.getRoot())).toString());
+        System.out.println("traverseLevelOrderBT::out: " + (BinaryTreeLevelOrder.traverse(tree.getRoot())));
     }
 
     public static void validateBST() {
@@ -275,6 +278,12 @@ public class Driver {
         tree.root.right.left.right = new BinaryTreeNode(8);
 
         return tree;
+    }
+
+    public static void validateGraphIsTree() {
+        int n = 5;
+        int[][] edges = new int[][]{{0,1}, {1,2}, {2,3}, {1,3}, {1,4}};
+        System.out.println("validateGraphIsTree::isTree: " + IsGraphTree.validateTree(n, edges));
     }
 
     public static BinaryTree binarySearchTreeBuilder() {

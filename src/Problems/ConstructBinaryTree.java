@@ -1,6 +1,5 @@
 package Problems;
 
-import Helper.BinaryTree;
 import Helper.BinaryTreeNode;
 
 public class ConstructBinaryTree {
