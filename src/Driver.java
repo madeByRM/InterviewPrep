@@ -81,6 +81,9 @@ public class Driver {
         /* 261. Graph Valid Tree: https://leetcode.com/problems/graph-valid-tree/ */
         validateGraphIsTree();
 
+        /* 238. Product of Array Except Self: https://leetcode.com/problems/product-of-array-except-self/ */
+        productExceptSelf();
+
     }
 
     public static void mergeTwoSortedLists() {
@@ -257,12 +260,18 @@ public class Driver {
         tree.printTree();
     }
 
-    public static CustomLinkedList<Integer> linkedListBuilder(int[] arr) {
-        CustomLinkedList<Integer> customLinkedList = new CustomLinkedList<>();
-        for (int i : arr) {
-            customLinkedList.add(i);
+    public static void validateGraphIsTree() {
+        int n = 5;
+        int[][] edges = new int[][]{{0,1}, {1,2}, {2,3}, {1,3}, {1,4}};
+        System.out.println("validateGraphIsTree::isTree: " + IsGraphTree.validateTree(n, edges));
+    }
+
+    public static void productExceptSelf() {
+        int[] answer = ProductExceptSelf.productExceptSelfSpaceOptimized(new int[] {1, 2, 3, 4});
+        System.out.print("productExceptSelf::productArray: ");
+        for (int i : answer) {
+            System.out.print(i + " ");
         }
-        return customLinkedList;
     }
 
     public static BinaryTree binaryTreeBuilder() {
@@ -276,16 +285,15 @@ public class Driver {
         tree.root.right.left = new BinaryTreeNode(6);
         tree.root.right.right = new BinaryTreeNode(7);
         tree.root.right.left.right = new BinaryTreeNode(8);
-
         return tree;
     }
-
-    public static void validateGraphIsTree() {
-        int n = 5;
-        int[][] edges = new int[][]{{0,1}, {1,2}, {2,3}, {1,3}, {1,4}};
-        System.out.println("validateGraphIsTree::isTree: " + IsGraphTree.validateTree(n, edges));
+    public static CustomLinkedList<Integer> linkedListBuilder(int[] arr) {
+        CustomLinkedList<Integer> customLinkedList = new CustomLinkedList<>();
+        for (int i : arr) {
+            customLinkedList.add(i);
+        }
+        return customLinkedList;
     }
-
     public static BinaryTree binarySearchTreeBuilder() {
         BinaryTree tree = new BinaryTree();
         tree.root = new BinaryTreeNode(6);
