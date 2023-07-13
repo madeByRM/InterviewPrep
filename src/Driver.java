@@ -84,6 +84,12 @@ public class Driver {
         /* 238. Product of Array Except Self: https://leetcode.com/problems/product-of-array-except-self/ */
         productExceptSelf();
 
+        /* 53. Maximum SubArray: https://leetcode.com/problems/maximum-subarray/description/ */
+        maxSubArray();
+
+        /* 153. Find Minimum in Rotated Sorted Array: https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/ */
+        findMinInRotatedArray();
+
     }
 
     public static void mergeTwoSortedLists() {
@@ -272,6 +278,15 @@ public class Driver {
         for (int i : answer) {
             System.out.print(i + " ");
         }
+        System.out.println();
+    }
+
+    public static void maxSubArray() {
+        System.out.println("maxSubArray::maxSum: " + MaxSumSubArray.maxSubArray(new int[] {-2,1,-3,4,-1,2,1,-5,4}));
+    }
+
+    public static void findMinInRotatedArray(){
+        System.out.println("findMinInRotatedArray::min: " + FindMinRotatedSortedArray.findMin(new int[] {4,5,6,7,1,2}));
     }
 
     public static BinaryTree binaryTreeBuilder() {
