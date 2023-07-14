@@ -90,6 +90,9 @@ public class Driver {
         /* 153. Find Minimum in Rotated Sorted Array: https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/ */
         findMinInRotatedArray();
 
+        /* 33. Search in Rotated Sorted Array: https://leetcode.com/problems/search-in-rotated-sorted-array/ */
+        findTargetInRotatedArray();
+
     }
 
     public static void mergeTwoSortedLists() {
@@ -287,6 +290,11 @@ public class Driver {
 
     public static void findMinInRotatedArray(){
         System.out.println("findMinInRotatedArray::min: " + FindMinRotatedSortedArray.findMin(new int[] {4,5,6,7,1,2}));
+    }
+
+    public static void findTargetInRotatedArray(){
+        System.out.println("findTargetInRotatedArray::index: " +
+                FindInRotatedSortedArray.search(new int[] {4,5,6,7,0,1,2}, 0));
     }
 
     public static BinaryTree binaryTreeBuilder() {
