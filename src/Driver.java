@@ -6,6 +6,9 @@ import Problems.*;
 
 public class Driver {
     public static void main(String[] args) {
+        /* 1. Two Sum: https://leetcode.com/problems/two-sum */
+        twoSum();
+
         /* Merge Two Sorted Lists: https://leetcode.com/problems/merge-two-sorted-lists/ */
         mergeTwoSortedLists();
 
@@ -93,6 +96,15 @@ public class Driver {
         /* 33. Search in Rotated Sorted Array: https://leetcode.com/problems/search-in-rotated-sorted-array/ */
         findTargetInRotatedArray();
 
+    }
+
+    public static void twoSum() {
+        int[] answer = TwoSum.twoSum(new int[]{2,7,11,15}, 9);
+        System.out.print("twoSum::indexes: ");
+        for (int i  : answer) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
     }
 
     public static void mergeTwoSortedLists() {
