@@ -12,6 +12,9 @@ public class Driver {
         /* 167. Two Sum II - Input Array Is Sorted: https://leetcode.com/problems/two-sum-ii-input-array-is-sorted */
         twoSumII();
 
+        /* 15. 3Sum: https://leetcode.com/problems/3sum/ */
+        threeSum();
+
         /* Merge Two Sorted Lists: https://leetcode.com/problems/merge-two-sorted-lists/ */
         mergeTwoSortedLists();
 
@@ -117,6 +120,10 @@ public class Driver {
             System.out.print(i + " ");
         }
         System.out.println();
+    }
+
+    public static void threeSum() {
+        System.out.println("threeSum::triplets: " + ThreeSum.threeSum(new int[] {-1,0,1,2,-1,-4}));
     }
 
     public static void mergeTwoSortedLists() {
