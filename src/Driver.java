@@ -9,6 +9,9 @@ public class Driver {
         /* 1. Two Sum: https://leetcode.com/problems/two-sum */
         twoSum();
 
+        /* 167. Two Sum II - Input Array Is Sorted: https://leetcode.com/problems/two-sum-ii-input-array-is-sorted */
+        twoSumII();
+
         /* Merge Two Sorted Lists: https://leetcode.com/problems/merge-two-sorted-lists/ */
         mergeTwoSortedLists();
 
@@ -101,6 +104,15 @@ public class Driver {
     public static void twoSum() {
         int[] answer = TwoSum.twoSum(new int[]{2,7,11,15}, 9);
         System.out.print("twoSum::indexes: ");
+        for (int i  : answer) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+    }
+
+    public static void twoSumII() {
+        int[] answer = TwoSumII.twoSum(new int[]{2,7,11,15}, 9);
+        System.out.print("twoSumII::indexes: ");
         for (int i  : answer) {
             System.out.print(i + " ");
         }
