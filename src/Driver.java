@@ -111,6 +111,9 @@ public class Driver {
         /* 198. House Robber: https://leetcode.com/problems/house-robber/ */
         houseRobber();
 
+        /* 213. House Robber II: https://leetcode.com/problems/house-robber-ii/ */
+        houseRobberII();
+
     }
 
     public static void twoSum() {
@@ -347,7 +350,11 @@ public class Driver {
     }
 
     public static void houseRobber() {
-        System.out.println("houseRobber::top-down: " + HouseRobber.rob(new int[] {2, 1, 1, 2}));
+        System.out.println("houseRobber::max: " + HouseRobber.rob(new int[] {2, 1, 1, 2}));
+    }
+
+    public static void houseRobberII() {
+        System.out.println("houseRobberII::max: " + HouseRobberII.rob(new int[] {1, 2, 3, 1}));
     }
 
     public static BinaryTree binaryTreeBuilder() {
