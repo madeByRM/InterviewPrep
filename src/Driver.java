@@ -108,6 +108,9 @@ public class Driver {
         /* 70. Climbing Stairs: https://leetcode.com/problems/climbing-stairs/ */
         climbStairs();
 
+        /* 198. House Robber: https://leetcode.com/problems/house-robber/ */
+        houseRobber();
+
     }
 
     public static void twoSum() {
@@ -340,7 +343,11 @@ public class Driver {
     }
 
     public static void climbStairs() {
-        System.out.println("climbStairs::top-down: " + ClimbingStairs.bottomUp(10));
+        System.out.println("climbStairs::top-down: " + ClimbingStairs.topDown(10));
+    }
+
+    public static void houseRobber() {
+        System.out.println("houseRobber::top-down: " + HouseRobber.rob(new int[] {2, 1, 1, 2}));
     }
 
     public static BinaryTree binaryTreeBuilder() {
