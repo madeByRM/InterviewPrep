@@ -102,6 +102,9 @@ public class Driver {
         /* 33. Search in Rotated Sorted Array: https://leetcode.com/problems/search-in-rotated-sorted-array/ */
         findTargetInRotatedArray();
 
+        /* 11. Container With Most Water: https://leetcode.com/problems/container-with-most-water/ */
+        containerWithMostWater();
+
     }
 
     public static void twoSum() {
@@ -326,6 +329,11 @@ public class Driver {
     public static void findTargetInRotatedArray(){
         System.out.println("findTargetInRotatedArray::index: " +
                 FindInRotatedSortedArray.search(new int[] {4,5,6,7,0,1,2}, 0));
+    }
+
+    public static void containerWithMostWater() {
+        System.out.println("containerWithMostWater::maxArea: " +
+                ContainerWithMostWater.maxArea(new int[] {1,8,6,2,5,4,8,3,7}));
     }
 
     public static BinaryTree binaryTreeBuilder() {
