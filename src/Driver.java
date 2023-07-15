@@ -105,6 +105,9 @@ public class Driver {
         /* 11. Container With Most Water: https://leetcode.com/problems/container-with-most-water/ */
         containerWithMostWater();
 
+        /* 70. Climbing Stairs: https://leetcode.com/problems/climbing-stairs/ */
+        climbStairs();
+
     }
 
     public static void twoSum() {
@@ -334,6 +337,10 @@ public class Driver {
     public static void containerWithMostWater() {
         System.out.println("containerWithMostWater::maxArea: " +
                 ContainerWithMostWater.maxArea(new int[] {1,8,6,2,5,4,8,3,7}));
+    }
+
+    public static void climbStairs() {
+        System.out.println("climbStairs::top-down: " + ClimbingStairs.bottomUp(10));
     }
 
     public static BinaryTree binaryTreeBuilder() {
