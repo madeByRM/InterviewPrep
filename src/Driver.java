@@ -114,6 +114,9 @@ public class Driver {
         /* 213. House Robber II: https://leetcode.com/problems/house-robber-ii/ */
         houseRobberII();
 
+        /* 200. Number of Islands: https://leetcode.com/problems/number-of-islands/ */
+        numberOfIslands();
+
     }
 
     public static void twoSum() {
@@ -355,6 +358,16 @@ public class Driver {
 
     public static void houseRobberII() {
         System.out.println("houseRobberII::max: " + HouseRobberII.rob(new int[] {1, 2, 3, 1}));
+    }
+
+    private static void numberOfIslands() {
+        char[][] inputArray = new char[][]{
+                {'1', '1', '0', '0', '0'},
+                {'1', '1', '0', '0', '0'},
+                {'0', '0', '1', '0', '0'},
+                {'0', '0', '0', '1', '1'}};
+        System.out.println("numberOfIslands::islands: " +
+                NumberOfIslands.numIslands(inputArray));
     }
 
     public static BinaryTree binaryTreeBuilder() {
