@@ -114,6 +114,9 @@ public class Driver {
         /* 213. House Robber II: https://leetcode.com/problems/house-robber-ii/ */
         houseRobberII();
 
+        /* 1143. Longest Common Subsequence: https://leetcode.com/problems/longest-common-subsequence/ */
+        longestCommonSubsequence();
+
         /* 200. Number of Islands: https://leetcode.com/problems/number-of-islands/ */
         numberOfIslands();
 
@@ -358,6 +361,10 @@ public class Driver {
 
     public static void houseRobberII() {
         System.out.println("houseRobberII::max: " + HouseRobberII.rob(new int[] {1, 2, 3, 1}));
+    }
+
+    public static void longestCommonSubsequence() {
+        System.out.println("longestCommonSubsequence::length: " + LongestCommonSubsequence.lcs("abcde", "ace"));
     }
 
     private static void numberOfIslands() {
