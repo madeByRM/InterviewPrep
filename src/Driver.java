@@ -117,6 +117,9 @@ public class Driver {
         /* 1143. Longest Common Subsequence: https://leetcode.com/problems/longest-common-subsequence/ */
         longestCommonSubsequence();
 
+        /* 300. Longest Increasing Subsequence: https://leetcode.com/problems/longest-increasing-subsequence/ */
+        longestIncreasingSubsequence();
+
         /* 200. Number of Islands: https://leetcode.com/problems/number-of-islands/ */
         numberOfIslands();
 
@@ -365,6 +368,11 @@ public class Driver {
 
     public static void longestCommonSubsequence() {
         System.out.println("longestCommonSubsequence::length: " + LongestCommonSubsequence.lcs("abcde", "ace"));
+    }
+
+    public static void longestIncreasingSubsequence() {
+        System.out.println("longestIncreasingSubsequence::length: " +
+                LongestIncreasingSubsequence.lengthOfLIS(new int[]{10,9,2,5,3,7,101,18}));
     }
 
     private static void numberOfIslands() {
