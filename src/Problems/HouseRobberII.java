@@ -17,7 +17,7 @@ public class HouseRobberII {
             return nums[0];
         }
 
-        int dp[] = new int[nums.length];
+        int[] dp = new int[nums.length];
         dp[0] = nums[0];
         dp[1] = Math.max(nums[0], nums[1]);
 

@@ -1,8 +1,10 @@
-import Helper.BinaryTree;
-import Helper.BinaryTreeNode;
-import Helper.CustomLinkedList;
-import Helper.LinkedListNode;
+import Helper.*;
 import Problems.*;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class Driver {
     public static void main(String[] args) {
@@ -125,6 +127,12 @@ public class Driver {
 
         /* 253. Meeting Rooms II: https://leetcode.com/problems/meeting-rooms-ii/ */
         meetingRoomsII();
+
+        /* 388. Longest Absolute File Path: https://leetcode.com/problems/longest-absolute-file-path/ */
+        longestAbsoluteFilePath();
+
+        /*690. Employee Importance: https://leetcode.com/problems/employee-importance/ */
+        employeeImportance();
 
     }
 
@@ -391,6 +399,20 @@ public class Driver {
     public static void meetingRoomsII() {
         System.out.println("meetingRoomsII::minRoomsRequired: " +
                 MeetingRoomsII.minMeetingRooms(new int[][]{{0, 30}, {5, 10}, {15, 20}}));
+    }
+
+    public static void longestAbsoluteFilePath() {
+        System.out.println("longestAbsoluteFilePath::length: " +
+                LongestAbsoluteFilePath.lengthLongestPath("dir\n\tsubdir1\n\tsubdir2\n\t\tfile.ext"));
+    }
+
+    public static void employeeImportance() {
+        Employee e1 = new Employee(1,5,new ArrayList<>(Arrays.asList(2,3)));
+        Employee e2 = new Employee(2,3,new ArrayList<>(Collections.emptyList()));
+        Employee e3 = new Employee(3,3,new ArrayList<>(Collections.emptyList()));
+        List<Employee> list = new ArrayList<>(Arrays.asList(e1, e2, e3));
+
+        System.out.println("employeeImportance::imp: " + EmployeeImportance.getImportance(list, 1));
     }
 
     public static BinaryTree binaryTreeBuilder() {
