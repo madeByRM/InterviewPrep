@@ -123,6 +123,9 @@ public class Driver {
         /* 200. Number of Islands: https://leetcode.com/problems/number-of-islands/ */
         numberOfIslands();
 
+        /* 253. Meeting Rooms II: https://leetcode.com/problems/meeting-rooms-ii/ */
+        meetingRoomsII();
+
     }
 
     public static void twoSum() {
@@ -383,6 +386,11 @@ public class Driver {
                 {'0', '0', '0', '1', '1'}};
         System.out.println("numberOfIslands::islands: " +
                 NumberOfIslands.numIslands(inputArray));
+    }
+
+    public static void meetingRoomsII() {
+        System.out.println("meetingRoomsII::minRoomsRequired: " +
+                MeetingRoomsII.minMeetingRooms(new int[][]{{0, 30}, {5, 10}, {15, 20}}));
     }
 
     public static BinaryTree binaryTreeBuilder() {
