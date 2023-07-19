@@ -17,6 +17,9 @@ public class Driver {
         /* 15. 3Sum: https://leetcode.com/problems/3sum/ */
         threeSum();
 
+        /* 217. Contains Duplicate: https://leetcode.com/problems/contains-duplicate/ */
+        containsDuplicate();
+
         /* Merge Two Sorted Lists: https://leetcode.com/problems/merge-two-sorted-lists/ */
         mergeTwoSortedLists();
 
@@ -134,6 +137,12 @@ public class Driver {
         /*690. Employee Importance: https://leetcode.com/problems/employee-importance/ */
         employeeImportance();
 
+        /* 365. Water and Jug Problem: https://leetcode.com/problems/water-and-jug-problem/ */
+        waterAndJugProblem();
+
+        /* 7. Reverse Integer: https://leetcode.com/problems/reverse-integer/ */
+        reverseInteger();
+
     }
 
     public static void twoSum() {
@@ -156,6 +165,11 @@ public class Driver {
 
     public static void threeSum() {
         System.out.println("threeSum::triplets: " + ThreeSum.threeSum(new int[] {-1,0,1,2,-1,-4}));
+    }
+
+    public static void containsDuplicate() {
+        System.out.println("containsDuplicate::duplicates: "
+                + ContainDuplicates.containsDuplicate(new int[] {1,1,1,3,3,4,3,2,4,2}));
     }
 
     public static void mergeTwoSortedLists() {
@@ -413,6 +427,15 @@ public class Driver {
         List<Employee> list = new ArrayList<>(Arrays.asList(e1, e2, e3));
 
         System.out.println("employeeImportance::imp: " + EmployeeImportance.getImportance(list, 1));
+    }
+
+    public static void waterAndJugProblem() {
+        System.out.println("waterAndJugProblem::canBeFilled: " +
+                WaterAndJug.canMeasureWater(3, 5, 4));
+    }
+
+    public static void reverseInteger() {
+        System.out.println("reverseInteger::reversed: " + ReverseInteger.reverse(-123));
     }
 
     public static BinaryTree binaryTreeBuilder() {

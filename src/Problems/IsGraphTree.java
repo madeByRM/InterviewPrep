@@ -9,7 +9,7 @@ public class IsGraphTree {
         }
         /*
         Check for two things
-        1. Each node are visited only once
+        1. Each node is visited only once
         2. there are no cycles
         */
         List<List<Integer>> adjecencyList = new ArrayList<>();
