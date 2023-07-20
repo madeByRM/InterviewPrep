@@ -1,2 +1,2 @@
 # InterviewPrep
-This repo contains coding problem working solutions. Feel free to add your own!
+This repo contains coding problems with working solutions. Feel free to add your own!
