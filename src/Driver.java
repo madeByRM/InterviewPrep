@@ -145,24 +145,19 @@ public class Driver {
         /* 49. Group Anagrams: https://leetcode.com/problems/group-anagrams/ */
         groupAnagrams();
 
+        /* 347. Top K Frequent Elements: https://leetcode.com/problems/top-k-frequent-elements/ */
+        topKFrequentElements();
+
     }
 
     public static void twoSum() {
-        int[] answer = TwoSum.twoSum(new int[]{2,7,11,15}, 9);
-        System.out.print("twoSum::indexes: ");
-        for (int i  : answer) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
+        System.out.println("twoSum::indexes: " +
+                Arrays.toString(TwoSum.twoSum(new int[]{2,7,11,15}, 9)));
     }
 
     public static void twoSumII() {
-        int[] answer = TwoSumII.twoSum(new int[]{2,7,11,15}, 9);
-        System.out.print("twoSumII::indexes: ");
-        for (int i  : answer) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
+        System.out.println("twoSumII::indexes: " +
+                Arrays.toString(TwoSumII.twoSum(new int[]{2,7,11,15}, 9)));
     }
 
     public static void threeSum() {
@@ -222,16 +217,7 @@ public class Driver {
     }
 
     public static void decodeString() {
-        String s = "10[rm]";
-        String out = DecodeString.decodeString(s);
-        System.out.println("decodeString::Decoded: " + out);
-        int count = 0;
-        for (char c : out.toCharArray()) {
-            if (c == 'r') {
-                count++;
-            }
-        }
-        System.out.println("Count: " + count);
+        System.out.println("decodeString::Decoded: " + DecodeString.decodeString("10[rm]"));
     }
 
     public static void removeDuplicateFromSortedLL() {
@@ -355,12 +341,8 @@ public class Driver {
     }
 
     public static void productExceptSelf() {
-        int[] answer = ProductExceptSelf.productExceptSelfSpaceOptimized(new int[] {1, 2, 3, 4});
-        System.out.print("productExceptSelf::productArray: ");
-        for (int i : answer) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
+        System.out.print("productExceptSelf::productArray: " +
+                Arrays.toString(ProductExceptSelf.productExceptSelfSpaceOptimized(new int[] {1, 2, 3, 4})));
     }
 
     public static void maxSubArray() {
@@ -443,6 +425,11 @@ public class Driver {
     public static void groupAnagrams() {
         System.out.println("groupAnagrams::groups: " +
                 GroupAnagrams.group(new String[] {"eat","tea","tan","ate","nat","bat"}));
+    }
+
+    public static void topKFrequentElements() {
+        System.out.println("topKFrequentElements::topElements: " +
+                Arrays.toString(TopFrequentElements.topKFrequent(new int[]{1, 1, 1, 2, 2, 3}, 2)));
     }
 
     public static BinaryTree binaryTreeBuilder() {
