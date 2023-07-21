@@ -1,6 +1,5 @@
 import Helper.*;
 import Problems.*;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -142,6 +141,9 @@ public class Driver {
 
         /* 7. Reverse Integer: https://leetcode.com/problems/reverse-integer/ */
         reverseInteger();
+
+        /* 49. Group Anagrams: https://leetcode.com/problems/group-anagrams/ */
+        groupAnagrams();
 
     }
 
@@ -436,6 +438,11 @@ public class Driver {
 
     public static void reverseInteger() {
         System.out.println("reverseInteger::reversed: " + ReverseInteger.reverse(-123));
+    }
+
+    public static void groupAnagrams() {
+        System.out.println("groupAnagrams::groups: " +
+                GroupAnagrams.group(new String[] {"eat","tea","tan","ate","nat","bat"}));
     }
 
     public static BinaryTree binaryTreeBuilder() {
