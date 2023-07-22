@@ -1,5 +1,6 @@
 import Helper.*;
 import Problems.*;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -148,25 +149,28 @@ public class Driver {
         /* 347. Top K Frequent Elements: https://leetcode.com/problems/top-k-frequent-elements/ */
         topKFrequentElements();
 
+        /* 36. Valid Sudoku: https://leetcode.com/problems/valid-sudoku/ */
+        validSudoku();
+
     }
 
     public static void twoSum() {
         System.out.println("twoSum::indexes: " +
-                Arrays.toString(TwoSum.twoSum(new int[]{2,7,11,15}, 9)));
+                Arrays.toString(TwoSum.twoSum(new int[]{2, 7, 11, 15}, 9)));
     }
 
     public static void twoSumII() {
         System.out.println("twoSumII::indexes: " +
-                Arrays.toString(TwoSumII.twoSum(new int[]{2,7,11,15}, 9)));
+                Arrays.toString(TwoSumII.twoSum(new int[]{2, 7, 11, 15}, 9)));
     }
 
     public static void threeSum() {
-        System.out.println("threeSum::triplets: " + ThreeSum.threeSum(new int[] {-1,0,1,2,-1,-4}));
+        System.out.println("threeSum::triplets: " + ThreeSum.threeSum(new int[]{-1, 0, 1, 2, -1, -4}));
     }
 
     public static void containsDuplicate() {
         System.out.println("containsDuplicate::duplicates: "
-                + ContainDuplicates.containsDuplicate(new int[] {1,1,1,3,3,4,3,2,4,2}));
+                + ContainDuplicates.containsDuplicate(new int[]{1, 1, 1, 3, 3, 4, 3, 2, 4, 2}));
     }
 
     public static void mergeTwoSortedLists() {
@@ -326,8 +330,8 @@ public class Driver {
     }
 
     public static void constructBTfromPreInorderTraversal() {
-        int[] preorder = new int[]{3,9,20,15,7};
-        int[] inorder = new int[]{9,3,15,20,7};
+        int[] preorder = new int[]{3, 9, 20, 15, 7};
+        int[] inorder = new int[]{9, 3, 15, 20, 7};
         BinaryTree tree = new BinaryTree();
         tree.root = ConstructBinaryTree.fromPreorderAndInorder(preorder, inorder);
         System.out.println("traverseLevelOrderBT::out: ");
@@ -336,31 +340,31 @@ public class Driver {
 
     public static void validateGraphIsTree() {
         int n = 5;
-        int[][] edges = new int[][]{{0,1}, {1,2}, {2,3}, {1,3}, {1,4}};
+        int[][] edges = new int[][]{{0, 1}, {1, 2}, {2, 3}, {1, 3}, {1, 4}};
         System.out.println("validateGraphIsTree::isTree: " + IsGraphTree.validateTree(n, edges));
     }
 
     public static void productExceptSelf() {
         System.out.print("productExceptSelf::productArray: " +
-                Arrays.toString(ProductExceptSelf.productExceptSelfSpaceOptimized(new int[] {1, 2, 3, 4})));
+                Arrays.toString(ProductExceptSelf.productExceptSelfSpaceOptimized(new int[]{1, 2, 3, 4})));
     }
 
     public static void maxSubArray() {
-        System.out.println("maxSubArray::maxSum: " + MaxSumSubArray.maxSubArray(new int[] {-2,1,-3,4,-1,2,1,-5,4}));
+        System.out.println("maxSubArray::maxSum: " + MaxSumSubArray.maxSubArray(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4}));
     }
 
-    public static void findMinInRotatedArray(){
-        System.out.println("findMinInRotatedArray::min: " + FindMinRotatedSortedArray.findMin(new int[] {4,5,6,7,1,2}));
+    public static void findMinInRotatedArray() {
+        System.out.println("findMinInRotatedArray::min: " + FindMinRotatedSortedArray.findMin(new int[]{4, 5, 6, 7, 1, 2}));
     }
 
-    public static void findTargetInRotatedArray(){
+    public static void findTargetInRotatedArray() {
         System.out.println("findTargetInRotatedArray::index: " +
-                FindInRotatedSortedArray.search(new int[] {4,5,6,7,0,1,2}, 0));
+                FindInRotatedSortedArray.search(new int[]{4, 5, 6, 7, 0, 1, 2}, 0));
     }
 
     public static void containerWithMostWater() {
         System.out.println("containerWithMostWater::maxArea: " +
-                ContainerWithMostWater.maxArea(new int[] {1,8,6,2,5,4,8,3,7}));
+                ContainerWithMostWater.maxArea(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}));
     }
 
     public static void climbStairs() {
@@ -368,11 +372,11 @@ public class Driver {
     }
 
     public static void houseRobber() {
-        System.out.println("houseRobber::max: " + HouseRobber.rob(new int[] {2, 1, 1, 2}));
+        System.out.println("houseRobber::max: " + HouseRobber.rob(new int[]{2, 1, 1, 2}));
     }
 
     public static void houseRobberII() {
-        System.out.println("houseRobberII::max: " + HouseRobberII.rob(new int[] {1, 2, 3, 1}));
+        System.out.println("houseRobberII::max: " + HouseRobberII.rob(new int[]{1, 2, 3, 1}));
     }
 
     public static void longestCommonSubsequence() {
@@ -381,7 +385,7 @@ public class Driver {
 
     public static void longestIncreasingSubsequence() {
         System.out.println("longestIncreasingSubsequence::length: " +
-                LongestIncreasingSubsequence.lengthOfLIS(new int[]{10,9,2,5,3,7,101,18}));
+                LongestIncreasingSubsequence.lengthOfLIS(new int[]{10, 9, 2, 5, 3, 7, 101, 18}));
     }
 
     private static void numberOfIslands() {
@@ -405,9 +409,9 @@ public class Driver {
     }
 
     public static void employeeImportance() {
-        Employee e1 = new Employee(1,5,new ArrayList<>(Arrays.asList(2,3)));
-        Employee e2 = new Employee(2,3,new ArrayList<>(Collections.emptyList()));
-        Employee e3 = new Employee(3,3,new ArrayList<>(Collections.emptyList()));
+        Employee e1 = new Employee(1, 5, new ArrayList<>(Arrays.asList(2, 3)));
+        Employee e2 = new Employee(2, 3, new ArrayList<>(Collections.emptyList()));
+        Employee e3 = new Employee(3, 3, new ArrayList<>(Collections.emptyList()));
         List<Employee> list = new ArrayList<>(Arrays.asList(e1, e2, e3));
 
         System.out.println("employeeImportance::imp: " + EmployeeImportance.getImportance(list, 1));
@@ -424,12 +428,25 @@ public class Driver {
 
     public static void groupAnagrams() {
         System.out.println("groupAnagrams::groups: " +
-                GroupAnagrams.group(new String[] {"eat","tea","tan","ate","nat","bat"}));
+                GroupAnagrams.group(new String[]{"eat", "tea", "tan", "ate", "nat", "bat"}));
     }
 
     public static void topKFrequentElements() {
         System.out.println("topKFrequentElements::topElements: " +
                 Arrays.toString(TopFrequentElements.topKFrequent(new int[]{1, 1, 1, 2, 2, 3}, 2)));
+    }
+
+    public static void validSudoku() {
+        System.out.println("validSudoku::isValid: " + ValidSudoku.isValidSudoku(new char[][]
+                       {{'5', '3', '.', '.', '7', '.', '.', '.', '.'},
+                        {'6', '.', '.', '1', '9', '5', '.', '.', '.'},
+                        {'.', '9', '8', '.', '.', '.', '.', '6', '.'},
+                        {'8', '.', '.', '.', '6', '.', '.', '.', '3'},
+                        {'4', '.', '.', '8', '.', '3', '.', '.', '1'},
+                        {'7', '.', '.', '.', '2', '.', '.', '.', '6'},
+                        {'.', '6', '.', '.', '.', '.', '2', '8', '.'},
+                        {'.', '.', '.', '4', '1', '9', '.', '.', '5'},
+                        {'.', '.', '.', '.', '8', '.', '.', '7', '9'}}));
     }
 
     public static BinaryTree binaryTreeBuilder() {
@@ -445,6 +462,7 @@ public class Driver {
         tree.root.right.left.right = new BinaryTreeNode(8);
         return tree;
     }
+
     public static CustomLinkedList<Integer> linkedListBuilder(int[] arr) {
         CustomLinkedList<Integer> customLinkedList = new CustomLinkedList<>();
         for (int i : arr) {
@@ -452,6 +470,7 @@ public class Driver {
         }
         return customLinkedList;
     }
+
     public static BinaryTree binarySearchTreeBuilder() {
         BinaryTree tree = new BinaryTree();
         tree.root = new BinaryTreeNode(6);
