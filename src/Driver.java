@@ -152,6 +152,9 @@ public class Driver {
         /* 36. Valid Sudoku: https://leetcode.com/problems/valid-sudoku/ */
         validSudoku();
 
+        /* 271. Encode and Decode Strings: https://leetcode.com/problems/encode-and-decode-strings/ */
+        encodeDecodeStrings();
+
     }
 
     public static void twoSum() {
@@ -447,6 +450,12 @@ public class Driver {
                         {'.', '6', '.', '.', '.', '.', '2', '8', '.'},
                         {'.', '.', '.', '4', '1', '9', '.', '.', '5'},
                         {'.', '.', '.', '.', '8', '.', '.', '7', '9'}}));
+    }
+
+    public static void encodeDecodeStrings() {
+        EncodeDecodeStrings codec = new EncodeDecodeStrings();
+        System.out.println("encodeDecodeStrings::decodedString: " +
+                codec.decode(codec.encode(new ArrayList<>(Arrays.asList("Hello","World")))));
     }
 
     public static BinaryTree binaryTreeBuilder() {
