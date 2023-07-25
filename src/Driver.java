@@ -122,6 +122,9 @@ public class Driver {
         /* 1143. Longest Common Subsequence: https://leetcode.com/problems/longest-common-subsequence/ */
         longestCommonSubsequence();
 
+        /* 128. Longest Consecutive Sequence: https://leetcode.com/problems/longest-consecutive-sequence/ */
+        longestConsecutiveSequence();
+
         /* 300. Longest Increasing Subsequence: https://leetcode.com/problems/longest-increasing-subsequence/ */
         longestIncreasingSubsequence();
 
@@ -384,6 +387,11 @@ public class Driver {
 
     public static void longestCommonSubsequence() {
         System.out.println("longestCommonSubsequence::length: " + LongestCommonSubsequence.lcs("abcde", "ace"));
+    }
+
+    public static void longestConsecutiveSequence() {
+        System.out.println("longestConsecutiveSequence::length: "
+                + LongestConsecutiveSequence.longestConsecutive(new int[] {100, 4, 200, 1, 3, 2}));
     }
 
     public static void longestIncreasingSubsequence() {
