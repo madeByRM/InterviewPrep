@@ -158,6 +158,9 @@ public class Driver {
         /* 271. Encode and Decode Strings: https://leetcode.com/problems/encode-and-decode-strings/ */
         encodeDecodeStrings();
 
+        /* 42. Trapping Rain Water: https://leetcode.com/problems/trapping-rain-water/ */
+        trappingRainWater();
+
     }
 
     public static void twoSum() {
@@ -464,6 +467,10 @@ public class Driver {
         EncodeDecodeStrings codec = new EncodeDecodeStrings();
         System.out.println("encodeDecodeStrings::decodedString: " +
                 codec.decode(codec.encode(new ArrayList<>(Arrays.asList("Hello","World")))));
+    }
+
+    public static void trappingRainWater() {
+
     }
 
     public static BinaryTree binaryTreeBuilder() {
