@@ -161,6 +161,9 @@ public class Driver {
         /* 42. Trapping Rain Water: https://leetcode.com/problems/trapping-rain-water/ */
         trappingRainWater();
 
+        /* 3. Longest Substring W/o Repeating Chars: https://leetcode.com/problems/longest-substring-without-repeating-characters/ */
+        longestSubstringWoRepeat();
+
     }
 
     public static void twoSum() {
@@ -471,6 +474,11 @@ public class Driver {
 
     public static void trappingRainWater() {
         System.out.println("trappingRainWater::max: " + TrappingRainWater.trap(new int[] {0,1,0,2,1,0,1,3,2,1,2,1}));
+    }
+
+    public static void longestSubstringWoRepeat() {
+        System.out.println("longestSubstringWoRepeat::length: "
+                + LongestSsWoRepeatingChars.lengthOfLongestSubstring("abcabcbb"));
     }
 
     public static BinaryTree binaryTreeBuilder() {
