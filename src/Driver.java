@@ -164,6 +164,9 @@ public class Driver {
         /* 3. Longest Substring W/o Repeating Chars: https://leetcode.com/problems/longest-substring-without-repeating-characters/ */
         longestSubstringWoRepeat();
 
+        /* 424. Longest Repeating Character Replacement: https://leetcode.com/problems/longest-repeating-character-replacement/ */
+        longestRepeatingCharReplacement();
+
     }
 
     public static void twoSum() {
@@ -479,6 +482,11 @@ public class Driver {
     public static void longestSubstringWoRepeat() {
         System.out.println("longestSubstringWoRepeat::length: "
                 + LongestSsWoRepeatingChars.lengthOfLongestSubstring("abcabcbb"));
+    }
+
+    public static void longestRepeatingCharReplacement() {
+        System.out.println("longestRepeatingCharReplacement::length: " +
+                LongestRepeatingCharReplace.characterReplacement("AABABBA", 1));
     }
 
     public static BinaryTree binaryTreeBuilder() {
