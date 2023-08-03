@@ -15,26 +15,35 @@ public class LongestRepeatingCharReplace {
         int maxLength = 0;
 
         for (Character c : allLetters) {
-            int left = 0;
+            int start = 0;
+            // counts occurrence of the curr char in curr window
             int count = 0;
 
-            for (int right = 0; right < s.length(); right++) {
-                if (s.charAt(right) == c) {
+            // iterate over input string and increase the count
+            for (int end = 0; end < s.length(); end++) {
+                // If the current character matches the current unique letter, increase the count
+                if (s.charAt(end) == c) {
                     count++;
                 }
-                while (!isWindowValid(left, right, count, k)) {
-                    if (s.charAt(left) == c) {
+                // While the window is no longer valid (more characters to be replaced than allowed)
+                // move the start pointer forward to shrink the window
+                while (!isWindowValid(start, end, count, k)) {
+                    // If the character at the start of the window matches the current unique letter,
+                    // decrease the count as the character will be removed from the window
+                    if (s.charAt(start) == c) {
                         count--;
                     }
-                    left++;
+                    // Move the start pointer forward to shrink the window
+                    start++;
                 }
-                maxLength = Math.max(maxLength, right + 1 - left);
+                maxLength = Math.max(maxLength, end + 1 - start);
             }
         }
         return maxLength;
     }
 
     private static boolean isWindowValid(int start, int end, int count, int k) {
+        // If the number of characters to be replaced is less than or equal to k, the window is valid.
         return end + 1 - start - count <= k;
     }
 }
