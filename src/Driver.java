@@ -167,6 +167,12 @@ public class Driver {
         /* 424. Longest Repeating Character Replacement: https://leetcode.com/problems/longest-repeating-character-replacement/ */
         longestRepeatingCharReplacement();
 
+        /* 567. Permutation in String: https://leetcode.com/problems/permutation-in-string/ */
+        permutationInString();
+
+        /* 20. Valid Parentheses: https://leetcode.com/problems/valid-parentheses/ */
+        validParentheses();
+
     }
 
     public static void twoSum() {
@@ -487,6 +493,16 @@ public class Driver {
     public static void longestRepeatingCharReplacement() {
         System.out.println("longestRepeatingCharReplacement::length: " +
                 LongestRepeatingCharReplace.characterReplacement("AABABBA", 1));
+    }
+
+    public static void permutationInString() {
+        System.out.println("permutationInString::perm: TO DO"
+                //+ PermutationInString.checkInclusion("ab", "eidbaooo")
+                );
+    }
+
+    public static void validParentheses() {
+        System.out.println("validParentheses::isValid: " + ValidParentheses.isValid("()[]{}"));
     }
 
     public static BinaryTree binaryTreeBuilder() {
