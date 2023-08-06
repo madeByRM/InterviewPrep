@@ -496,9 +496,7 @@ public class Driver {
     }
 
     public static void permutationInString() {
-        System.out.println("permutationInString::perm: TO DO"
-                //+ PermutationInString.checkInclusion("ab", "eidbaooo")
-                );
+        System.out.println("permutationInString::perm: " + PermutationInString.checkInclusion("ab", "eidbaooo"));
     }
 
     public static void validParentheses() {
