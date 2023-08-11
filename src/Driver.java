@@ -173,6 +173,9 @@ public class Driver {
         /* 20. Valid Parentheses: https://leetcode.com/problems/valid-parentheses/ */
         validParentheses();
 
+        /* 76. Minimum Window Substring: https://leetcode.com/problems/minimum-window-substring/ */
+        minimumWindowSubstring();
+
     }
 
     public static void twoSum() {
@@ -501,6 +504,11 @@ public class Driver {
 
     public static void validParentheses() {
         System.out.println("validParentheses::isValid: " + ValidParentheses.isValid("()[]{}"));
+    }
+
+    private static void minimumWindowSubstring() {
+        System.out.println("minimumWindowSubstring::minWindow: "
+                + MinimumWindowSubstring.minWindow("ADOBECODEBANC", "ABC"));
     }
 
     public static BinaryTree binaryTreeBuilder() {
