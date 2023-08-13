@@ -24,24 +24,28 @@ public class MinimumWindowSubstring {
         int minStart = 0; // Starting index of the minimum window substring
         int matched = 0; // Count of characters from string t that are currently in the window
 
+        // Iterate through the characters in s using the right pointer
         for (int right = 0; right < s.length(); right++) {
             char c = s.charAt(right);
 
-            if (targetFreq[c] > 0) {
+            // Expand the window by including the current character
+            if (targetFreq[c] > 0) { // checks if char at right pointer in string T
                 windowFreq[c]++;
                 if (windowFreq[c] <= targetFreq[c]) {
                     matched++;
                 }
             }
 
+            // Try to minimize the window by moving the left pointer; This will hit when there are match of size T
             while (matched == t.length()) {
+                // Update minLen and minStart if a smaller window is found
                 if (right - left + 1 < minLen) {
                     minLen = right - left + 1;
                     minStart = left;
                 }
 
+                // Contract the window by removing the left character
                 char leftChar = s.charAt(left);
-
                 if (targetFreq[leftChar] > 0) {
                     windowFreq[leftChar]--;
                     if (windowFreq[leftChar] < targetFreq[leftChar]) {
