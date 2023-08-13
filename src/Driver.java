@@ -176,6 +176,9 @@ public class Driver {
         /* 76. Minimum Window Substring: https://leetcode.com/problems/minimum-window-substring/ */
         minimumWindowSubstring();
 
+        /* 239. Sliding Window Maximum: */
+        slidingWindowMaximum();
+
     }
 
     public static void twoSum() {
@@ -506,9 +509,14 @@ public class Driver {
         System.out.println("validParentheses::isValid: " + ValidParentheses.isValid("()[]{}"));
     }
 
-    private static void minimumWindowSubstring() {
+    public static void minimumWindowSubstring() {
         System.out.println("minimumWindowSubstring::minWindow: "
                 + MinimumWindowSubstring.minWindow("ADOBECODEBANC", "ABC"));
+    }
+
+    public static void slidingWindowMaximum() {
+        System.out.println("slidingWindowMaximum::maxInWindow: "
+                + Arrays.toString(SlidingWindowMaximum.maxSlidingWindow(new int[] {1, 3, -1, -3, 5, 3, 6, 7}, 3)));
     }
 
     public static BinaryTree binaryTreeBuilder() {
