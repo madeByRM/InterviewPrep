@@ -182,6 +182,9 @@ public class Driver {
         /* 155. Min Stack: https://leetcode.com/problems/min-stack/ */
         minStack();
 
+        /* 150. Evaluate Reverse Polish Notation */
+        evaluateRPN();
+
     }
 
     public static void twoSum() {
@@ -528,6 +531,11 @@ public class Driver {
         minStack.push(100);
         minStack.push(-100);
         System.out.println("minStack::min: " + minStack.getMin());
+    }
+
+    public static void evaluateRPN() {
+        System.out.println("evaluateRPN::ans: "
+                + ReversePolishNotation.evalRPN(new String[]{"10","6","9","3","+","-11","*","/","*","17","+","5","+"}));
     }
 
     public static BinaryTree binaryTreeBuilder() {
