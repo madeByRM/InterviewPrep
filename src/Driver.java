@@ -179,6 +179,9 @@ public class Driver {
         /* 239. Sliding Window Maximum: https://leetcode.com/problems/sliding-window-maximum/ */
         slidingWindowMaximum();
 
+        /* 155. Min Stack: https://leetcode.com/problems/min-stack/ */
+        minStack();
+
     }
 
     public static void twoSum() {
@@ -517,6 +520,14 @@ public class Driver {
     public static void slidingWindowMaximum() {
         System.out.println("slidingWindowMaximum::maxInWindow: "
                 + Arrays.toString(SlidingWindowMaximum.maxSlidingWindow(new int[] {1, 3, -1, -3, 5, 3, 6, 7}, 3)));
+    }
+
+    public static void minStack() {
+        MinStack minStack = new MinStack();
+        minStack.push(1);
+        minStack.push(100);
+        minStack.push(-100);
+        System.out.println("minStack::min: " + minStack.getMin());
     }
 
     public static BinaryTree binaryTreeBuilder() {
