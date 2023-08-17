@@ -185,6 +185,9 @@ public class Driver {
         /* 150. Evaluate Reverse Polish Notation */
         evaluateRPN();
 
+        /* 22. Generate Parentheses: https://leetcode.com/problems/generate-parentheses/ */
+        generateParentheses();
+
     }
 
     public static void twoSum() {
@@ -536,6 +539,10 @@ public class Driver {
     public static void evaluateRPN() {
         System.out.println("evaluateRPN::ans: "
                 + ReversePolishNotation.evalRPN(new String[]{"10","6","9","3","+","-11","*","/","*","17","+","5","+"}));
+    }
+
+    public static void generateParentheses() {
+        System.out.println("generateParentheses::parentheses: " + GenerateParentheses.generateParenthesis(3));
     }
 
     public static BinaryTree binaryTreeBuilder() {
