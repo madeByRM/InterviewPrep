@@ -188,6 +188,9 @@ public class Driver {
         /* 22. Generate Parentheses: https://leetcode.com/problems/generate-parentheses/ */
         generateParentheses();
 
+        /* 739. Daily Temperatures: */
+        dailyTemperatures();
+
     }
 
     public static void twoSum() {
@@ -543,6 +546,11 @@ public class Driver {
 
     public static void generateParentheses() {
         System.out.println("generateParentheses::parentheses: " + GenerateParentheses.generateParenthesis(3));
+    }
+
+    public static void dailyTemperatures() {
+        System.out.println("dailyTemperatures::tempChanges: "
+                + Arrays.toString(DailyTemperatures.dailyTemperatures(new int[] {73, 74, 75, 71, 69, 72, 76, 73})));
     }
 
     public static BinaryTree binaryTreeBuilder() {
