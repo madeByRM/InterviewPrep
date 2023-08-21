@@ -191,6 +191,9 @@ public class Driver {
         /* 739. Daily Temperatures: */
         dailyTemperatures();
 
+        /* 853. Car Fleet: https://leetcode.com/problems/car-fleet/ */
+        carFleet();
+
     }
 
     public static void twoSum() {
@@ -551,6 +554,11 @@ public class Driver {
     public static void dailyTemperatures() {
         System.out.println("dailyTemperatures::tempChanges: "
                 + Arrays.toString(DailyTemperatures.dailyTemperatures(new int[] {73, 74, 75, 71, 69, 72, 76, 73})));
+    }
+
+    public static void carFleet() {
+        System.out.println("carFleet::numOfCars: "
+                + CarFleet.carFleet(12, new int[] {10, 8, 0, 5, 3}, new int[] {2, 4, 1, 1, 3}));
     }
 
     public static BinaryTree binaryTreeBuilder() {
