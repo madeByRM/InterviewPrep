@@ -1,6 +1,7 @@
 import Helper.*;
 import Problems.*;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -193,6 +194,9 @@ public class Driver {
 
         /* 853. Car Fleet: https://leetcode.com/problems/car-fleet/ */
         carFleet();
+
+        /* 74. Search a 2D Matrix: https://leetcode.com/problems/search-a-2d-matrix/ */
+        search2DMatrix();
 
     }
 
@@ -559,6 +563,11 @@ public class Driver {
     public static void carFleet() {
         System.out.println("carFleet::numOfCars: "
                 + CarFleet.carFleet(12, new int[] {10, 8, 0, 5, 3}, new int[] {2, 4, 1, 1, 3}));
+    }
+
+    public static void search2DMatrix() {
+        System.out.println("search2DMatrix::inMatrix: "
+                + Search2DMatrix.searchMatrix(new int[][] {{1,3,5,7}, {10,11,16,20}, {23,30,34,60}}, 3));
     }
 
     public static BinaryTree binaryTreeBuilder() {
