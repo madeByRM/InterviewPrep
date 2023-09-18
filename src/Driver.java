@@ -2,10 +2,7 @@ import Helper.*;
 import Problems.*;
 
 import java.sql.SQLOutput;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Driver {
     public static void main(String[] args) {
@@ -197,6 +194,9 @@ public class Driver {
 
         /* 74. Search a 2D Matrix: https://leetcode.com/problems/search-a-2d-matrix/ */
         search2DMatrix();
+
+        /* 875. Koko Eating Bananas: https://leetcode.com/problems/koko-eating-bananas/ */
+        eatingBananas();
 
     }
 
@@ -568,6 +568,11 @@ public class Driver {
     public static void search2DMatrix() {
         System.out.println("search2DMatrix::inMatrix: "
                 + Search2DMatrix.searchMatrix(new int[][] {{1,3,5,7}, {10,11,16,20}, {23,30,34,60}}, 3));
+    }
+
+    public static void eatingBananas() {
+        System.out.println("eatingBananas::minBPH: "
+                + KokoEatingBananas.minEatingSpeed(new int[] {30, 11, 23, 4, 20}, 5));
     }
 
     public static BinaryTree binaryTreeBuilder() {
