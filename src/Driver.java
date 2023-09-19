@@ -192,6 +192,9 @@ public class Driver {
         /* 853. Car Fleet: https://leetcode.com/problems/car-fleet/ */
         carFleet();
 
+        /* 84. Largest Rectangle in Histogram: https://leetcode.com/problems/largest-rectangle-in-histogram/ */
+        largestRectangleHistogram();
+
         /* 74. Search a 2D Matrix: https://leetcode.com/problems/search-a-2d-matrix/ */
         search2DMatrix();
 
@@ -563,6 +566,11 @@ public class Driver {
     public static void carFleet() {
         System.out.println("carFleet::numOfCars: "
                 + CarFleet.carFleet(12, new int[] {10, 8, 0, 5, 3}, new int[] {2, 4, 1, 1, 3}));
+    }
+
+    public static void largestRectangleHistogram() {
+        System.out.println("largestRectangleHistogram::largestArea: "
+                + LargestRectangleHistogram.largestRectangleArea(new int[] {2, 1, 5, 6, 2, 3}));
     }
 
     public static void search2DMatrix() {
