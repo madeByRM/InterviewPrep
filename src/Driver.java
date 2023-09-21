@@ -199,6 +199,9 @@ public class Driver {
         /* 875. Koko Eating Bananas: https://leetcode.com/problems/koko-eating-bananas/ */
         eatingBananas();
 
+        /* 981. Time Based Key-Value Store: */
+        timeBasedKeyValueStore();
+
     }
 
     public static void twoSum() {
@@ -579,6 +582,17 @@ public class Driver {
     public static void eatingBananas() {
         System.out.println("eatingBananas::minBPH: "
                 + KokoEatingBananas.minEatingSpeed(new int[] {30, 11, 23, 4, 20}, 5));
+    }
+
+    public static void timeBasedKeyValueStore() {
+        TimeBasedStore timeMap = new TimeBasedStore();
+        timeMap.set("foo", "bar", 1);  // store the key "foo" and value "bar" along with timestamp = 1.
+        timeMap.get("foo", 1);         // return "bar"
+        timeMap.get("foo", 3);         // return "bar"
+        timeMap.set("foo", "bar2", 4); // store the key "foo" and value "bar2" along with timestamp = 4.
+        timeMap.get("foo", 4);         // return "bar2"
+        timeMap.get("foo", 5);         // return "bar2"
+        System.out.println("timeBasedKeyValueStore::value: " + timeMap);
     }
 
     public static BinaryTree binaryTreeBuilder() {
