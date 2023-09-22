@@ -199,8 +199,11 @@ public class Driver {
         /* 875. Koko Eating Bananas: https://leetcode.com/problems/koko-eating-bananas/ */
         eatingBananas();
 
-        /* 981. Time Based Key-Value Store: */
+        /* 981. Time Based Key-Value Store: https://leetcode.com/problems/time-based-key-value-store/ */
         timeBasedKeyValueStore();
+
+        /* 4. Median of Two Sorted Arrays: https://leetcode.com/problems/median-of-two-sorted-arrays/ */
+        medianOfTwoSortedArrays();
 
     }
 
@@ -593,6 +596,11 @@ public class Driver {
         timeMap.get("foo", 4);         // return "bar2"
         timeMap.get("foo", 5);         // return "bar2"
         System.out.println("timeBasedKeyValueStore::value: " + timeMap);
+    }
+
+    public static void medianOfTwoSortedArrays() {
+        System.out.println("medianOfTwoSortedArrays::median: "
+                + MedianTwoSortedArrays.findMedianSortedArrays(new int[]{1, 3}, new int[]{2}));
     }
 
     public static BinaryTree binaryTreeBuilder() {
