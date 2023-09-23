@@ -61,6 +61,9 @@ public class Driver {
         /* 2. Add Two Numbers: https://leetcode.com/problems/add-two-numbers/ */
         addTwoNumbers();
 
+        /* 141. Linked List Cycle: https://leetcode.com/problems/linked-list-cycle/*/
+        linkedListCycle();
+
         /* Check for Binary Tree is SumTree: https://www.geeksforgeeks.org/check-if-a-given-binary-tree-is-sumtree/ */
         isSumTree();
 
@@ -325,9 +328,15 @@ public class Driver {
     public static void addTwoNumbers() {
         CustomLinkedList<Integer> list1 = linkedListBuilder(new int[] {2, 4, 3});
         CustomLinkedList<Integer> list2 = linkedListBuilder(new int[] {5, 6, 4});
-        LinkedListNode result = AddTwoNumbers.addTwoNumbers(list1.getHead(), list2.getHead());
+        LinkedListNode<Integer> result = AddTwoNumbers.addTwoNumbers(list1.getHead(), list2.getHead());
         System.out.print("addTwoNumbers::result: ");
         result.printListFromNode(result);
+    }
+
+    // cycle not implemented
+    public static void linkedListCycle() {
+        CustomLinkedList<Integer> list = linkedListBuilder(new int[]{1, 1, 1, 1});
+        System.out.println("linkedListCycle::result: " + LinkedListCycle.hasCycle(list.getHead()));
     }
 
     public static void isSumTree() {

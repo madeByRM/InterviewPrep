@@ -3,11 +3,11 @@ package Problems;
 import Helper.LinkedListNode;
 
 public class AddTwoNumbers {
-    public static LinkedListNode addTwoNumbers(LinkedListNode l1, LinkedListNode l2) {
+    public static LinkedListNode<Integer> addTwoNumbers(LinkedListNode<Integer> l1, LinkedListNode<Integer> l2) {
         // Create a dummy head node to simplify the code and represent the result.
-        LinkedListNode dummyHead = new LinkedListNode(0);
+        LinkedListNode<Integer> dummyHead = new LinkedListNode<>(0);
         // Initialize a pointer 'curr' to the dummy head.
-        LinkedListNode curr = dummyHead;
+        LinkedListNode<Integer> curr = dummyHead;
         // Initialize a 'carry' variable to hold any carry-over value.
         int carry = 0;
 
@@ -21,7 +21,7 @@ public class AddTwoNumbers {
             // Calculate the new carry-over value.
             carry = sum / 10;
             // Create a new node with the units digit of the sum and attach it to 'curr.next'.
-            curr.next = new LinkedListNode(sum % 10);
+            curr.next = new LinkedListNode<>(sum % 10);
             // Move 'curr' to the newly created node.
             curr = curr.next;
             // Move 'l1' and 'l2' pointers to the next digits (if available).
