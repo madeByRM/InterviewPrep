@@ -43,8 +43,8 @@ public class Driver {
         /* Remove Duplicate From Sorted Linked List: Cracking the coding interview book */
         removeDuplicateFromSortedLL();
 
-        /* Remove Nth Element From Last In Linked List: Cracking the coding interview book */
-        removeNthFromLastLL();
+        /* 19. Remove Nth Node From End of List: https://leetcode.com/problems/remove-nth-node-from-end-of-list/ */
+        removeNthFromEndLL();
 
         /* 206. Reverse Linked List: https://leetcode.com/problems/reverse-linked-list/ */
         reverseLinkedList();
@@ -54,6 +54,12 @@ public class Driver {
 
         /* 234. Palindrome Linked List: https://leetcode.com/problems/palindrome-linked-list/ */
         isPalindromeLL();
+
+        /* 138. Copy List with Random Pointer: https://leetcode.com/problems/copy-list-with-random-pointer/ */
+        copyListWithRandomPointer();
+
+        /* 2. Add Two Numbers: https://leetcode.com/problems/add-two-numbers/ */
+        addTwoNumbers();
 
         /* Check for Binary Tree is SumTree: https://www.geeksforgeeks.org/check-if-a-given-binary-tree-is-sumtree/ */
         isSumTree();
@@ -285,9 +291,9 @@ public class Driver {
         newHead.printListFromNode(newHead);
     }
 
-    public static void removeNthFromLastLL() {
+    public static void removeNthFromEndLL() {
         CustomLinkedList<Integer> list = linkedListBuilder(new int[]{1, 2, 3, 4, 5, 6, 7, 8});
-        LinkedListNode<Integer> newHead = RemoveNthFromLast.removeNthFromLast(list.getHead(), 2);
+        LinkedListNode<Integer> newHead = RemoveNthFromEnd.removeNthFromLast(list.getHead(), 2);
         System.out.print("removeNthFromLastLL::New List: ");
         newHead.printListFromNode(newHead);
     }
@@ -308,7 +314,20 @@ public class Driver {
 
     public static void isPalindromeLL() {
         CustomLinkedList<Integer> list = linkedListBuilder(new int[]{1, 1, 1, 1});
-        System.out.print("isPalindromeLL::isPalindrome: " + PalindromeLinkedList.isPalindromeLL(list.getHead()));
+        System.out.println("isPalindromeLL::isPalindrome: " + PalindromeLinkedList.isPalindromeLL(list.getHead()));
+    }
+
+    private static void copyListWithRandomPointer() {
+        CustomLinkedList<Integer> list = linkedListBuilder(new int[]{1, 1, 1, 1});
+        System.out.println("copyListWithRandomPointer::copiedList: " + CopyList.copyRandomList(list.getHead()));
+    }
+
+    public static void addTwoNumbers() {
+        CustomLinkedList<Integer> list1 = linkedListBuilder(new int[] {2, 4, 3});
+        CustomLinkedList<Integer> list2 = linkedListBuilder(new int[] {5, 6, 4});
+        LinkedListNode result = AddTwoNumbers.addTwoNumbers(list1.getHead(), list2.getHead());
+        System.out.print("addTwoNumbers::result: ");
+        result.printListFromNode(result);
     }
 
     public static void isSumTree() {
@@ -398,7 +417,7 @@ public class Driver {
     }
 
     public static void productExceptSelf() {
-        System.out.print("productExceptSelf::productArray: " +
+        System.out.println("productExceptSelf::productArray: " +
                 Arrays.toString(ProductExceptSelf.productExceptSelfSpaceOptimized(new int[]{1, 2, 3, 4})));
     }
 
