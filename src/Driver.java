@@ -64,6 +64,9 @@ public class Driver {
         /* 141. Linked List Cycle: https://leetcode.com/problems/linked-list-cycle/*/
         linkedListCycle();
 
+        /* 287. Find the Duplicate Number: https://leetcode.com/problems/find-the-duplicate-number/*/
+        findTheDuplicateNumber();
+
         /* Check for Binary Tree is SumTree: https://www.geeksforgeeks.org/check-if-a-given-binary-tree-is-sumtree/ */
         isSumTree();
 
@@ -214,24 +217,27 @@ public class Driver {
         /* 4. Median of Two Sorted Arrays: https://leetcode.com/problems/median-of-two-sorted-arrays/ */
         medianOfTwoSortedArrays();
 
+        /* 146. LRU Cache: https://leetcode.com/problems/lru-cache/ */
+        LRUCache();
+
     }
 
     public static void twoSum() {
-        System.out.println("twoSum::indexes: " +
+        System.out.println("001 : twoSum::indexes: " +
                 Arrays.toString(TwoSum.twoSum(new int[]{2, 7, 11, 15}, 9)));
     }
 
     public static void twoSumII() {
-        System.out.println("twoSumII::indexes: " +
+        System.out.println("002 : twoSumII::indexes: " +
                 Arrays.toString(TwoSumII.twoSum(new int[]{2, 7, 11, 15}, 9)));
     }
 
     public static void threeSum() {
-        System.out.println("threeSum::triplets: " + ThreeSum.threeSum(new int[]{-1, 0, 1, 2, -1, -4}));
+        System.out.println("003 : threeSum::triplets: " + ThreeSum.threeSum(new int[]{-1, 0, 1, 2, -1, -4}));
     }
 
     public static void containsDuplicate() {
-        System.out.println("containsDuplicate::duplicates: "
+        System.out.println("004 : containsDuplicate::duplicates: "
                 + ContainDuplicates.containsDuplicate(new int[]{1, 1, 1, 3, 3, 4, 3, 2, 4, 2}));
     }
 
@@ -240,34 +246,34 @@ public class Driver {
         CustomLinkedList<Integer> list2 = linkedListBuilder(new int[]{1, 3, 4});
         MergeTwoSortedLists mergeTwoSortedLists = new MergeTwoSortedLists();
         LinkedListNode<Integer> ans = mergeTwoSortedLists.mergeTwoLists(list1.getHead(), list2.getHead());
-        System.out.print("mergeTwoSortedLists::Merged List: ");
+        System.out.print("005 : mergeTwoSortedLists::Merged List: ");
         ans.printListFromNode(ans);
     }
 
     public static void bestTimeToBuySellStock() {
         BestTimeToBuySellStock b1 = new BestTimeToBuySellStock();
         int[] prices = new int[]{7, 1, 5, 3, 6, 4};
-        System.out.println("bestTimeToBuySellStock::Max profit: " + b1.maxProfitOptimized(prices));
+        System.out.println("006 : bestTimeToBuySellStock::Max profit: " + b1.maxProfitOptimized(prices));
     }
 
     public static void validPalindrome() {
         ValidPalindrome v1 = new ValidPalindrome();
-        System.out.println("validPalindrome::Is valid: " + v1.isPalindromeOptimized("A man, a plan, a canal: Panama"));
+        System.out.println("007 : validPalindrome::Is valid: " + v1.isPalindromeOptimized("A man, a plan, a canal: Panama"));
     }
 
     public static void validAnagram() {
         ValidAnagram v1 = new ValidAnagram();
-        System.out.println("validAnagram::Is valid: " + v1.isAnagramOptimized("anagram", "nagaram"));
+        System.out.println("008 : validAnagram::Is valid: " + v1.isAnagramOptimized("anagram", "nagaram"));
     }
 
     public static void binarySearch() {
         BinarySearch b1 = new BinarySearch();
-        System.out.println("binarySearch::Result: " + b1.search(new int[]{-1, 0, 3, 5, 9, 12}, 9));
+        System.out.println("009 : binarySearch::Result: " + b1.search(new int[]{-1, 0, 3, 5, 9, 12}, 9));
     }
 
     public static void invertBinaryTree() {
         BinaryTree binaryTree = binaryTreeBuilder();
-        System.out.println("invertBinaryTree::Input");
+        System.out.println("010 : invertBinaryTree::Input");
         binaryTree.printTree();
         InvertBinaryTree ibt = new InvertBinaryTree();
         ibt.invertTree(binaryTree.getRoot());
@@ -277,19 +283,19 @@ public class Driver {
 
     public static void balancedBinaryTree() {
         BinaryTree binaryTree = binaryTreeBuilder();
-        System.out.println("balancedBinaryTree::Input");
+        System.out.println("011 : balancedBinaryTree::Input");
         binaryTree.printTree();
         System.out.println("balancedBinaryTree::isBalanced: " + BalancedBinaryTree.isBalanced(binaryTree.getRoot()));
     }
 
     public static void decodeString() {
-        System.out.println("decodeString::Decoded: " + DecodeString.decodeString("10[rm]"));
+        System.out.println("012 : decodeString::Decoded: " + DecodeString.decodeString("10[rm]"));
     }
 
     public static void removeDuplicateFromSortedLL() {
         CustomLinkedList<Integer> list = linkedListBuilder(new int[]{1, 2, 4, 4, 5, 6, 6});
         RemoveDuplicatesLL.removeDuplicatesFromUnsortedLinkedList(list.getHead());
-        System.out.print("removeDuplicateFromSortedLL::New List: ");
+        System.out.print("013 : removeDuplicateFromSortedLL::New List: ");
         LinkedListNode<Integer> newHead = list.getHead();
         newHead.printListFromNode(newHead);
     }
@@ -297,51 +303,56 @@ public class Driver {
     public static void removeNthFromEndLL() {
         CustomLinkedList<Integer> list = linkedListBuilder(new int[]{1, 2, 3, 4, 5, 6, 7, 8});
         LinkedListNode<Integer> newHead = RemoveNthFromEnd.removeNthFromLast(list.getHead(), 2);
-        System.out.print("removeNthFromLastLL::New List: ");
+        System.out.print("014 : removeNthFromLastLL::New List: ");
         newHead.printListFromNode(newHead);
     }
 
     public static void reverseLinkedList() {
         CustomLinkedList<Integer> list = linkedListBuilder(new int[]{1, 2, 3, 4, 5, 6, 7, 8});
         LinkedListNode<Integer> reverseHead = ReverseLinkedList.reverseLinkedList(list.getHead());
-        System.out.print("reverseLinkedList::Reversed List: ");
+        System.out.print("015 : reverseLinkedList::Reversed List: ");
         reverseHead.printListFromNode(reverseHead);
     }
 
     public static void reorderLinkedList() {
         CustomLinkedList<Integer> list = linkedListBuilder(new int[]{1, 2, 3, 4, 5});
         ReorderLinkedList.reorderLinkedList(list.getHead());
-        System.out.print("reorderLinkedList::Reordered List: ");
+        System.out.print("016 : reorderLinkedList::Reordered List: ");
         (list.getHead()).printListFromNode(list.getHead());
     }
 
     public static void isPalindromeLL() {
         CustomLinkedList<Integer> list = linkedListBuilder(new int[]{1, 1, 1, 1});
-        System.out.println("isPalindromeLL::isPalindrome: " + PalindromeLinkedList.isPalindromeLL(list.getHead()));
+        System.out.println("017 : isPalindromeLL::isPalindrome: " + PalindromeLinkedList.isPalindromeLL(list.getHead()));
     }
 
     private static void copyListWithRandomPointer() {
         CustomLinkedList<Integer> list = linkedListBuilder(new int[]{1, 1, 1, 1});
-        System.out.println("copyListWithRandomPointer::copiedList: " + CopyList.copyRandomList(list.getHead()));
+        System.out.println("018 : copyListWithRandomPointer::copiedList: " + CopyList.copyRandomList(list.getHead()));
     }
 
     public static void addTwoNumbers() {
         CustomLinkedList<Integer> list1 = linkedListBuilder(new int[] {2, 4, 3});
         CustomLinkedList<Integer> list2 = linkedListBuilder(new int[] {5, 6, 4});
         LinkedListNode<Integer> result = AddTwoNumbers.addTwoNumbers(list1.getHead(), list2.getHead());
-        System.out.print("addTwoNumbers::result: ");
+        System.out.print("019 : addTwoNumbers::result: ");
         result.printListFromNode(result);
     }
 
     // cycle not implemented
     public static void linkedListCycle() {
         CustomLinkedList<Integer> list = linkedListBuilder(new int[]{1, 1, 1, 1});
-        System.out.println("linkedListCycle::result: " + LinkedListCycle.hasCycle(list.getHead()));
+        System.out.println("020 : linkedListCycle::result: " + LinkedListCycle.hasCycle(list.getHead()));
+    }
+
+    public static void findTheDuplicateNumber() {
+        System.out.println("021 : findTheDuplicateNumber::result: "
+                + FindDuplicateNumber.findDuplicate(new int[] {1, 3, 4, 2, 2}));
     }
 
     public static void isSumTree() {
         BinaryTree tree = binaryTreeBuilder();
-        System.out.println("isSumTree::isSumTree: " + BinarySumTree.isSumTree(tree.getRoot()));
+        System.out.println("022 : isSumTree::isSumTree: " + BinarySumTree.isSumTree(tree.getRoot()));
     }
 
     public static void areNodesCousins() {
@@ -349,38 +360,38 @@ public class Driver {
         BinaryTreeNode node1, node2;
         node1 = tree.root.left.left;
         node2 = tree.root.right.right;
-        System.out.println("areNodesCousins::Cousins: " + BinaryTreeCousinNodes.areCousins(tree.getRoot(), node1, node2));
+        System.out.println("023 : areNodesCousins::Cousins: " + BinaryTreeCousinNodes.areCousins(tree.getRoot(), node1, node2));
     }
 
     public static void maximumPathSumBT() {
         BinaryTree tree = binaryTreeBuilder();
-        System.out.println("maximumPathSumBT::maxSum: " + MaximumPathSumBT.maxSum(tree.getRoot()));
+        System.out.println("024 : maximumPathSumBT::maxSum: " + MaximumPathSumBT.maxSum(tree.getRoot()));
     }
 
     public static void maximumDepthBT() {
         BinaryTree tree = binaryTreeBuilder();
-        System.out.println("maximumDepthBT::maxDepth: " + MaximumDepthBT.maxDepth(tree.getRoot()));
+        System.out.println("025 : maximumDepthBT::maxDepth: " + MaximumDepthBT.maxDepth(tree.getRoot()));
     }
 
     public static void sameTree() {
         BinaryTree tree = binaryTreeBuilder();
         BinaryTree tree2 = binaryTreeBuilder();
         tree.root.right.left.right.left = new BinaryTreeNode(9);
-        System.out.println("sameTree::same: " + SameTree.areTreesSame(tree.getRoot(), tree2.getRoot()));
+        System.out.println("026 : sameTree::same: " + SameTree.areTreesSame(tree.getRoot(), tree2.getRoot()));
     }
 
     public static void isSubtree() {
         BinaryTree tree = binaryTreeBuilder();
         BinaryTree tree2 = binaryTreeBuilder();
         tree.root.right.left.right.left = new BinaryTreeNode(9);
-        System.out.println("isSubtree::subTree: " + SubtreeOfAnotherTree.isSubtree(tree.getRoot(), tree2.getRoot()));
+        System.out.println("027 : isSubtree::subTree: " + SubtreeOfAnotherTree.isSubtree(tree.getRoot(), tree2.getRoot()));
     }
 
     public static void getLCAofBST() {
         BinaryTree bst = binarySearchTreeBuilder();
         BinaryTreeNode n1 = new BinaryTreeNode(2);
         BinaryTreeNode n2 = new BinaryTreeNode(4);
-        System.out.println("getLCAofBST::LCA: " + (LCAofBST.lowestCommonAncestor(bst.getRoot(), n1, n2)).val);
+        System.out.println("028 : getLCAofBST::LCA: " + (LCAofBST.lowestCommonAncestor(bst.getRoot(), n1, n2)).val);
     }
 
     public static void getLCAofBT() {
@@ -397,17 +408,17 @@ public class Driver {
 
         BinaryTreeNode n1 = new BinaryTreeNode(5);
         BinaryTreeNode n2 = new BinaryTreeNode(4);
-        System.out.println("getLCAofBT::LCA: " + (LCAofBT.LCAofBToptimum(tree.getRoot(), n1, n2)).val);
+        System.out.println("029 : getLCAofBT::LCA: " + (LCAofBT.LCAofBToptimum(tree.getRoot(), n1, n2)).val);
     }
 
     public static void traverseLevelOrderBT() {
         BinaryTree tree = binaryTreeBuilder();
-        System.out.println("traverseLevelOrderBT::out: " + (BinaryTreeLevelOrder.traverse(tree.getRoot())));
+        System.out.println("030 : traverseLevelOrderBT::out: " + (BinaryTreeLevelOrder.traverse(tree.getRoot())));
     }
 
     public static void validateBST() {
         BinaryTree bst = binarySearchTreeBuilder();
-        System.out.println("validateBST::isBST: " + ValidateBST.isValidBST(bst.getRoot()));
+        System.out.println("031 : validateBST::isBST: " + ValidateBST.isValidBST(bst.getRoot()));
     }
 
     public static void constructBTfromPreInorderTraversal() {
@@ -415,62 +426,62 @@ public class Driver {
         int[] inorder = new int[]{9, 3, 15, 20, 7};
         BinaryTree tree = new BinaryTree();
         tree.root = ConstructBinaryTree.fromPreorderAndInorder(preorder, inorder);
-        System.out.println("traverseLevelOrderBT::out: ");
+        System.out.println("032 : traverseLevelOrderBT::out: ");
         tree.printTree();
     }
 
     public static void validateGraphIsTree() {
         int n = 5;
         int[][] edges = new int[][]{{0, 1}, {1, 2}, {2, 3}, {1, 3}, {1, 4}};
-        System.out.println("validateGraphIsTree::isTree: " + IsGraphTree.validateTree(n, edges));
+        System.out.println("033 : validateGraphIsTree::isTree: " + IsGraphTree.validateTree(n, edges));
     }
 
     public static void productExceptSelf() {
-        System.out.println("productExceptSelf::productArray: " +
+        System.out.println("034 : productExceptSelf::productArray: " +
                 Arrays.toString(ProductExceptSelf.productExceptSelfSpaceOptimized(new int[]{1, 2, 3, 4})));
     }
 
     public static void maxSubArray() {
-        System.out.println("maxSubArray::maxSum: " + MaxSumSubArray.maxSubArray(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4}));
+        System.out.println("035 : maxSubArray::maxSum: " + MaxSumSubArray.maxSubArray(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4}));
     }
 
     public static void findMinInRotatedArray() {
-        System.out.println("findMinInRotatedArray::min: " + FindMinRotatedSortedArray.findMin(new int[]{4, 5, 6, 7, 1, 2}));
+        System.out.println("036 : findMinInRotatedArray::min: " + FindMinRotatedSortedArray.findMin(new int[]{4, 5, 6, 7, 1, 2}));
     }
 
     public static void findTargetInRotatedArray() {
-        System.out.println("findTargetInRotatedArray::index: " +
+        System.out.println("037 : findTargetInRotatedArray::index: " +
                 FindInRotatedSortedArray.search(new int[]{4, 5, 6, 7, 0, 1, 2}, 0));
     }
 
     public static void containerWithMostWater() {
-        System.out.println("containerWithMostWater::maxArea: " +
+        System.out.println("038 : containerWithMostWater::maxArea: " +
                 ContainerWithMostWater.maxArea(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}));
     }
 
     public static void climbStairs() {
-        System.out.println("climbStairs::top-down: " + ClimbingStairs.topDown(10));
+        System.out.println("039 : climbStairs::top-down: " + ClimbingStairs.topDown(10));
     }
 
     public static void houseRobber() {
-        System.out.println("houseRobber::max: " + HouseRobber.rob(new int[]{2, 1, 1, 2}));
+        System.out.println("040 : houseRobber::max: " + HouseRobber.rob(new int[]{2, 1, 1, 2}));
     }
 
     public static void houseRobberII() {
-        System.out.println("houseRobberII::max: " + HouseRobberII.rob(new int[]{1, 2, 3, 1}));
+        System.out.println("041 : houseRobberII::max: " + HouseRobberII.rob(new int[]{1, 2, 3, 1}));
     }
 
     public static void longestCommonSubsequence() {
-        System.out.println("longestCommonSubsequence::length: " + LongestCommonSubsequence.lcs("abcde", "ace"));
+        System.out.println("042 : longestCommonSubsequence::length: " + LongestCommonSubsequence.lcs("abcde", "ace"));
     }
 
     public static void longestConsecutiveSequence() {
-        System.out.println("longestConsecutiveSequence::length: "
+        System.out.println("043 : longestConsecutiveSequence::length: "
                 + LongestConsecutiveSequence.longestConsecutive(new int[] {100, 4, 200, 1, 3, 2}));
     }
 
     public static void longestIncreasingSubsequence() {
-        System.out.println("longestIncreasingSubsequence::length: " +
+        System.out.println("044 : longestIncreasingSubsequence::length: " +
                 LongestIncreasingSubsequence.lengthOfLIS(new int[]{10, 9, 2, 5, 3, 7, 101, 18}));
     }
 
@@ -480,17 +491,17 @@ public class Driver {
                 {'1', '1', '0', '0', '0'},
                 {'0', '0', '1', '0', '0'},
                 {'0', '0', '0', '1', '1'}};
-        System.out.println("numberOfIslands::islands: " +
+        System.out.println("045 : numberOfIslands::islands: " +
                 NumberOfIslands.numIslands(inputArray));
     }
 
     public static void meetingRoomsII() {
-        System.out.println("meetingRoomsII::minRoomsRequired: " +
+        System.out.println("046 : meetingRoomsII::minRoomsRequired: " +
                 MeetingRoomsII.minMeetingRooms(new int[][]{{0, 30}, {5, 10}, {15, 20}}));
     }
 
     public static void longestAbsoluteFilePath() {
-        System.out.println("longestAbsoluteFilePath::length: " +
+        System.out.println("047 : longestAbsoluteFilePath::length: " +
                 LongestAbsoluteFilePath.lengthLongestPath("dir\n\tsubdir1\n\tsubdir2\n\t\tfile.ext"));
     }
 
@@ -500,30 +511,30 @@ public class Driver {
         Employee e3 = new Employee(3, 3, new ArrayList<>(Collections.emptyList()));
         List<Employee> list = new ArrayList<>(Arrays.asList(e1, e2, e3));
 
-        System.out.println("employeeImportance::imp: " + EmployeeImportance.getImportance(list, 1));
+        System.out.println("048 : employeeImportance::imp: " + EmployeeImportance.getImportance(list, 1));
     }
 
     public static void waterAndJugProblem() {
-        System.out.println("waterAndJugProblem::canBeFilled: " +
+        System.out.println("049 : waterAndJugProblem::canBeFilled: " +
                 WaterAndJug.canMeasureWater(3, 5, 4));
     }
 
     public static void reverseInteger() {
-        System.out.println("reverseInteger::reversed: " + ReverseInteger.reverse(-123));
+        System.out.println("050 : reverseInteger::reversed: " + ReverseInteger.reverse(-123));
     }
 
     public static void groupAnagrams() {
-        System.out.println("groupAnagrams::groups: " +
+        System.out.println("051 : groupAnagrams::groups: " +
                 GroupAnagrams.group(new String[]{"eat", "tea", "tan", "ate", "nat", "bat"}));
     }
 
     public static void topKFrequentElements() {
-        System.out.println("topKFrequentElements::topElements: " +
+        System.out.println("052 : topKFrequentElements::topElements: " +
                 Arrays.toString(TopFrequentElements.topKFrequent(new int[]{1, 1, 1, 2, 2, 3}, 2)));
     }
 
     public static void validSudoku() {
-        System.out.println("validSudoku::isValid: " + ValidSudoku.isValidSudoku(new char[][]
+        System.out.println("053 : validSudoku::isValid: " + ValidSudoku.isValidSudoku(new char[][]
                        {{'5', '3', '.', '.', '7', '.', '.', '.', '.'},
                         {'6', '.', '.', '1', '9', '5', '.', '.', '.'},
                         {'.', '9', '8', '.', '.', '.', '.', '6', '.'},
@@ -537,39 +548,39 @@ public class Driver {
 
     public static void encodeDecodeStrings() {
         EncodeDecodeStrings codec = new EncodeDecodeStrings();
-        System.out.println("encodeDecodeStrings::decodedString: " +
+        System.out.println("054 : encodeDecodeStrings::decodedString: " +
                 codec.decode(codec.encode(new ArrayList<>(Arrays.asList("Hello","World")))));
     }
 
     public static void trappingRainWater() {
-        System.out.println("trappingRainWater::max: " + TrappingRainWater.trap(new int[] {0,1,0,2,1,0,1,3,2,1,2,1}));
+        System.out.println("055 : trappingRainWater::max: " + TrappingRainWater.trap(new int[] {0,1,0,2,1,0,1,3,2,1,2,1}));
     }
 
     public static void longestSubstringWoRepeat() {
-        System.out.println("longestSubstringWoRepeat::length: "
+        System.out.println("056 : longestSubstringWoRepeat::length: "
                 + LongestSsWoRepeatingChars.lengthOfLongestSubstring("abcabcbb"));
     }
 
     public static void longestRepeatingCharReplacement() {
-        System.out.println("longestRepeatingCharReplacement::length: " +
+        System.out.println("057 : longestRepeatingCharReplacement::length: " +
                 LongestRepeatingCharReplace.characterReplacement("AABABBA", 1));
     }
 
     public static void permutationInString() {
-        System.out.println("permutationInString::perm: " + PermutationInString.checkInclusion("ab", "eidbaooo"));
+        System.out.println("058 : permutationInString::perm: " + PermutationInString.checkInclusion("ab", "eidbaooo"));
     }
 
     public static void validParentheses() {
-        System.out.println("validParentheses::isValid: " + ValidParentheses.isValid("()[]{}"));
+        System.out.println("059 : validParentheses::isValid: " + ValidParentheses.isValid("()[]{}"));
     }
 
     public static void minimumWindowSubstring() {
-        System.out.println("minimumWindowSubstring::minWindow: "
+        System.out.println("060 : minimumWindowSubstring::minWindow: "
                 + MinimumWindowSubstring.minWindow("ADOBECODEBANC", "ABC"));
     }
 
     public static void slidingWindowMaximum() {
-        System.out.println("slidingWindowMaximum::maxInWindow: "
+        System.out.println("061 : slidingWindowMaximum::maxInWindow: "
                 + Arrays.toString(SlidingWindowMaximum.maxSlidingWindow(new int[] {1, 3, -1, -3, 5, 3, 6, 7}, 3)));
     }
 
@@ -578,40 +589,40 @@ public class Driver {
         minStack.push(1);
         minStack.push(100);
         minStack.push(-100);
-        System.out.println("minStack::min: " + minStack.getMin());
+        System.out.println("062 : minStack::min: " + minStack.getMin());
     }
 
     public static void evaluateRPN() {
-        System.out.println("evaluateRPN::ans: "
+        System.out.println("063 : evaluateRPN::ans: "
                 + ReversePolishNotation.evalRPN(new String[]{"10","6","9","3","+","-11","*","/","*","17","+","5","+"}));
     }
 
     public static void generateParentheses() {
-        System.out.println("generateParentheses::parentheses: " + GenerateParentheses.generateParenthesis(3));
+        System.out.println("064 : generateParentheses::parentheses: " + GenerateParentheses.generateParenthesis(3));
     }
 
     public static void dailyTemperatures() {
-        System.out.println("dailyTemperatures::tempChanges: "
+        System.out.println("065 : dailyTemperatures::tempChanges: "
                 + Arrays.toString(DailyTemperatures.dailyTemperatures(new int[] {73, 74, 75, 71, 69, 72, 76, 73})));
     }
 
     public static void carFleet() {
-        System.out.println("carFleet::numOfCars: "
+        System.out.println("066 : carFleet::numOfCars: "
                 + CarFleet.carFleet(12, new int[] {10, 8, 0, 5, 3}, new int[] {2, 4, 1, 1, 3}));
     }
 
     public static void largestRectangleHistogram() {
-        System.out.println("largestRectangleHistogram::largestArea: "
+        System.out.println("067 : largestRectangleHistogram::largestArea: "
                 + LargestRectangleHistogram.largestRectangleArea(new int[] {2, 1, 5, 6, 2, 3}));
     }
 
     public static void search2DMatrix() {
-        System.out.println("search2DMatrix::inMatrix: "
+        System.out.println("068 : search2DMatrix::inMatrix: "
                 + Search2DMatrix.searchMatrix(new int[][] {{1,3,5,7}, {10,11,16,20}, {23,30,34,60}}, 3));
     }
 
     public static void eatingBananas() {
-        System.out.println("eatingBananas::minBPH: "
+        System.out.println("069 : eatingBananas::minBPH: "
                 + KokoEatingBananas.minEatingSpeed(new int[] {30, 11, 23, 4, 20}, 5));
     }
 
@@ -623,12 +634,26 @@ public class Driver {
         timeMap.set("foo", "bar2", 4); // store the key "foo" and value "bar2" along with timestamp = 4.
         timeMap.get("foo", 4);         // return "bar2"
         timeMap.get("foo", 5);         // return "bar2"
-        System.out.println("timeBasedKeyValueStore::value: " + timeMap);
+        System.out.println("070 : timeBasedKeyValueStore::value: " + timeMap);
     }
 
     public static void medianOfTwoSortedArrays() {
-        System.out.println("medianOfTwoSortedArrays::median: "
+        System.out.println("071 : medianOfTwoSortedArrays::median: "
                 + MedianTwoSortedArrays.findMedianSortedArrays(new int[]{1, 3}, new int[]{2}));
+    }
+
+    public static void LRUCache() {
+        LRUCache lRUCache = new LRUCache(2);
+        lRUCache.put(1, 1); // cache is {1=1}
+        lRUCache.put(2, 2); // cache is {1=1, 2=2}
+        lRUCache.get(1);    // return 1
+        lRUCache.put(3, 3); // LRU key was 2, evicts key 2, cache is {1=1, 3=3}
+        lRUCache.get(2);    // returns -1 (not found)
+        lRUCache.put(4, 4); // LRU key was 1, evicts key 1, cache is {4=4, 3=3}
+        lRUCache.get(1);    // return -1 (not found)
+        lRUCache.get(3);    // return 3
+        lRUCache.get(4);    // return 4
+        System.out.println("072 : LRUCache::inCache: " + lRUCache);
     }
 
     public static BinaryTree binaryTreeBuilder() {

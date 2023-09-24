@@ -5,10 +5,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CopyList {
-    public static LinkedListNode copyRandomList(LinkedListNode head) {
+    public static LinkedListNode<Integer> copyRandomList(LinkedListNode<Integer> head) {
         // Step 1: Create a mapping between original nodes and their corresponding copies
-        LinkedListNode curr = head;
-        Map<LinkedListNode, LinkedListNode> map = new HashMap<>();
+        LinkedListNode<Integer> curr = head;
+        Map<LinkedListNode<Integer>, LinkedListNode<Integer>> map = new HashMap<>();
 
         while (curr != null) {
             // Create a new node for the current original node and store it in the map

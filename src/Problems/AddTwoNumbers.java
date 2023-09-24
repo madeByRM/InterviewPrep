@@ -14,8 +14,8 @@ public class AddTwoNumbers {
         // Main loop: Continue until there are no more digits to add, and carry is 0.
         while (l1 != null || l2 != null || carry != 0) {
             // Get the current digits from l1 and l2 (default to 0 if null).
-            int x = (l1 != null) ? (int) l1.value : 0;
-            int y = (l2 != null) ? (int) l2.value : 0;
+            int x = (l1 != null) ? l1.value : 0;
+            int y = (l2 != null) ? l2.value : 0;
             // Calculate the sum of current digits and the carry-over.
             int sum = carry + x + y;
             // Calculate the new carry-over value.
