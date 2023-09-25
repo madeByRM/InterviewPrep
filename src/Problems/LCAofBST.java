@@ -23,18 +23,18 @@ public class LCAofBST {
         return root;
     }
 
-    public static BinaryTreeNode lowestCommonAncestor2(BinaryTreeNode root, BinaryTreeNode p, BinaryTreeNode q) {
-        BinaryTreeNode node = root;
-
-        while (node != null) {
-            if (p.val > node.val && q.val > node.val) {
-                node = node.right;
-            } else if (p.val < node.val && q.val < node.val) {
-                node = node.left;
-            } else {
-                return node;
-            }
-        }
-        return null;
-    }
+//    public static BinaryTreeNode lowestCommonAncestor2(BinaryTreeNode root, BinaryTreeNode p, BinaryTreeNode q) {
+//        BinaryTreeNode node = root;
+//
+//        while (node != null) {
+//            if (p.val > node.val && q.val > node.val) {
+//                node = node.right;
+//            } else if (p.val < node.val && q.val < node.val) {
+//                node = node.left;
+//            } else {
+//                return node;
+//            }
+//        }
+//        return null;
+//    }
 }

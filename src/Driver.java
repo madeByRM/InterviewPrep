@@ -220,6 +220,9 @@ public class Driver {
         /* 543. Diameter of Binary Tree: https://leetcode.com/problems/diameter-of-binary-tree/ */
         diameterOfBinaryTree();
 
+        /* 199. Binary Tree Right Side View: https://leetcode.com/problems/binary-tree-right-side-view/ */
+        binaryTreeRightSideView();
+
     }
 
     public static void twoSum() {
@@ -655,6 +658,12 @@ public class Driver {
         BinaryTree binaryTree = binaryTreeBuilder();
         System.out.println("072 : diameterOfBinaryTree::diameter: "
                 + DiameterBT.diameterOfBinaryTree(binaryTree.getRoot()));
+    }
+
+    private static void binaryTreeRightSideView() {
+        BinaryTree binaryTree = binaryTreeBuilder();
+        System.out.println("073 : diameterOfBinaryTree::diameter: "
+                + BTRightSideView.rightSideView(binaryTree.getRoot()));
     }
 
     public static BinaryTree binaryTreeBuilder() {

@@ -15,15 +15,14 @@ public class BinaryTreeLevelOrder {
         }
         Queue<BinaryTreeNode> queue = new LinkedList<>();
         queue.add(root);
-        int level = 0;
 
         while (!queue.isEmpty()) {
-            answer.add(new ArrayList<>());
+            List<Integer> subList = new ArrayList<>();
             int queueSize = queue.size();
 
             for (int i = 0; i < queueSize; i++) {
                 BinaryTreeNode current = queue.remove();
-                answer.get(level).add(current.val);
+                subList.add(current.val);
 
                 if (current.left != null) {
                     queue.add(current.left);
@@ -32,7 +31,7 @@ public class BinaryTreeLevelOrder {
                     queue.add(current.right);
                 }
             }
-            level++;
+            answer.add(subList);
         }
         return answer;
     }
