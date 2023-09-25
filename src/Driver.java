@@ -34,7 +34,7 @@ public class Driver {
         /* Invert Binary Tree: https://leetcode.com/problems/invert-binary-tree/ */
         invertBinaryTree();
 
-        /* Balanced Binary Tree: https://leetcode.com/problems/balanced-binary-tree/ */
+        /* 110. Balanced Binary Tree: https://leetcode.com/problems/balanced-binary-tree/ */
         balancedBinaryTree();
 
         /* Decode String: https://leetcode.com/problems/decode-string/ */
@@ -213,9 +213,6 @@ public class Driver {
 
         /* 981. Time Based Key-Value Store: https://leetcode.com/problems/time-based-key-value-store/ */
         timeBasedKeyValueStore();
-
-        /* 4. Median of Two Sorted Arrays: https://leetcode.com/problems/median-of-two-sorted-arrays/ */
-        medianOfTwoSortedArrays();
 
         /* 146. LRU Cache: https://leetcode.com/problems/lru-cache/ */
         LRUCache();
@@ -640,11 +637,6 @@ public class Driver {
         System.out.println("070 : timeBasedKeyValueStore::value: " + timeMap);
     }
 
-    public static void medianOfTwoSortedArrays() {
-        System.out.println("071 : medianOfTwoSortedArrays::median: "
-                + MedianTwoSortedArrays.findMedianSortedArrays(new int[]{1, 3}, new int[]{2}));
-    }
-
     public static void LRUCache() {
         LRUCache lRUCache = new LRUCache(2);
         lRUCache.put(1, 1); // cache is {1=1}
@@ -656,12 +648,12 @@ public class Driver {
         lRUCache.get(1);    // return -1 (not found)
         lRUCache.get(3);    // return 3
         lRUCache.get(4);    // return 4
-        System.out.println("072 : LRUCache::inCache: " + lRUCache);
+        System.out.println("071 : LRUCache::inCache: " + lRUCache);
     }
 
     public static void diameterOfBinaryTree() {
         BinaryTree binaryTree = binaryTreeBuilder();
-        System.out.println("073 : diameterOfBinaryTree::diameter: "
+        System.out.println("072 : diameterOfBinaryTree::diameter: "
                 + DiameterBT.diameterOfBinaryTree(binaryTree.getRoot()));
     }
 
