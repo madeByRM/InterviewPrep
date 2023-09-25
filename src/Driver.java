@@ -220,6 +220,9 @@ public class Driver {
         /* 146. LRU Cache: https://leetcode.com/problems/lru-cache/ */
         LRUCache();
 
+        /* 543. Diameter of Binary Tree: https://leetcode.com/problems/diameter-of-binary-tree/ */
+        diameterOfBinaryTree();
+
     }
 
     public static void twoSum() {
@@ -654,6 +657,12 @@ public class Driver {
         lRUCache.get(3);    // return 3
         lRUCache.get(4);    // return 4
         System.out.println("072 : LRUCache::inCache: " + lRUCache);
+    }
+
+    public static void diameterOfBinaryTree() {
+        BinaryTree binaryTree = binaryTreeBuilder();
+        System.out.println("073 : diameterOfBinaryTree::diameter: "
+                + DiameterBT.diameterOfBinaryTree(binaryTree.getRoot()));
     }
 
     public static BinaryTree binaryTreeBuilder() {
