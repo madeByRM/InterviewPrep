@@ -73,7 +73,7 @@ public class Driver {
         /* Binary Tree cousin nodes: https://www.geeksforgeeks.org/check-two-nodes-cousins-binary-tree/ */
         areNodesCousins();
 
-        /* Binary Tree Max Path Sum: https://www.geeksforgeeks.org/find-maximum-path-sum-in-a-binary-tree/ */
+        /* 124. Binary Tree Maximum Path Sum: https://leetcode.com/problems/binary-tree-maximum-path-sum/ */
         maximumPathSumBT();
 
         /* 104. Maximum Depth of Binary Tree: https://leetcode.com/problems/maximum-depth-of-binary-tree/ */

@@ -3,6 +3,9 @@ package Problems;
 import Helper.BinaryTreeNode;
 
 /*
+The idea is to traverse the tree in a bottom-up manner, calculating the maximum path sum for each subtree while keeping
+track of the global maximum path sum encountered so far.
+
 1. The maxPathSum method takes the root node of the binary tree as input and returns the maximum path sum.
 
 2. It initializes the maxSum variable to Integer.MIN_VALUE to track the maximum path sum encountered during the traversal.
@@ -37,12 +40,16 @@ public class MaximumPathSumBT {
             return 0;
         }
 
+        // Calculate the maximum path sum for the left and right subtrees while ensuring non-negativity
         int leftSum = Math.max(calculateMaxPathSum(node.left), 0);
         int rightSum = Math.max(calculateMaxPathSum(node.right), 0);
 
+        // Calculate the path sum that includes the current node
         int currentPathSum = node.val + leftSum + rightSum;
+        // Update the global maxSum with the maximum path sum encountered so far
         maxSum = Math.max(maxSum, currentPathSum);
 
+        // Return the maximum path sum that can be extended to the parent node i.e. keep going up
         return node.val + Math.max(leftSum, rightSum);
     }
 }
