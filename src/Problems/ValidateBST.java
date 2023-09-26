@@ -33,4 +33,25 @@ public class ValidateBST {
         }
         return true;
     }
+
+    /*
+    public boolean isValidBST2(BinaryTreeNode root) {
+        if (root == null) {
+            return true;
+        }
+        return dfs(root, null, null);
+    }
+
+    private boolean dfs(BinaryTreeNode root, Integer min, Integer max) {
+        if (root == null) {
+            return true;
+        }
+        if ((min != null && root.val <= min) || max != null && root.val >= max) {
+            return false;
+        }
+
+        return dfs(root.left, min, root.val) && dfs(root.right, root.val, max);
+    }
+
+     */
 }
