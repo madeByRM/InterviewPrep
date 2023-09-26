@@ -1,8 +1,6 @@
 package Problems;
 
-import Helper.BinaryTree;
 import Helper.BinaryTreeNode;
-
 import java.util.*;
 
 public class BTRightSideView {
@@ -22,6 +20,7 @@ public class BTRightSideView {
                 if (i == 0) {
                     answer.add(curr.val);
                 }
+                assert curr != null;
                 if (curr.right != null) {
                     q.offer(curr.right);
                 }

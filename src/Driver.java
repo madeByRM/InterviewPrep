@@ -223,6 +223,9 @@ public class Driver {
         /* 199. Binary Tree Right Side View: https://leetcode.com/problems/binary-tree-right-side-view/ */
         binaryTreeRightSideView();
 
+        /* 1448. Count Good Nodes in Binary Tree: */
+        countGoodNodesInBinaryTree();
+
     }
 
     public static void twoSum() {
@@ -664,6 +667,12 @@ public class Driver {
         BinaryTree binaryTree = binaryTreeBuilder();
         System.out.println("073 : diameterOfBinaryTree::diameter: "
                 + BTRightSideView.rightSideView(binaryTree.getRoot()));
+    }
+
+    public static void countGoodNodesInBinaryTree() {
+        BinaryTree binaryTree = binaryTreeBuilder();
+        System.out.println("074 : countGoodNodesInBinaryTree::goodNodes: "
+                + CountGoodNodesBT.goodNodes(binaryTree.getRoot()));
     }
 
     public static BinaryTree binaryTreeBuilder() {
