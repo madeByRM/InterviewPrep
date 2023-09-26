@@ -223,8 +223,11 @@ public class Driver {
         /* 199. Binary Tree Right Side View: https://leetcode.com/problems/binary-tree-right-side-view/ */
         binaryTreeRightSideView();
 
-        /* 1448. Count Good Nodes in Binary Tree: */
+        /* 1448. Count Good Nodes in Binary Tree: https://leetcode.com/problems/count-good-nodes-in-binary-tree/*/
         countGoodNodesInBinaryTree();
+
+        /* 230. Kth Smallest Element in a BST: https://leetcode.com/problems/kth-smallest-element-in-a-bst/ */
+        kThSmallestElementBST();
 
     }
 
@@ -673,6 +676,12 @@ public class Driver {
         BinaryTree binaryTree = binaryTreeBuilder();
         System.out.println("074 : countGoodNodesInBinaryTree::goodNodes: "
                 + CountGoodNodesBT.goodNodes(binaryTree.getRoot()));
+    }
+
+    public static void kThSmallestElementBST() {
+        BinaryTree bst = binarySearchTreeBuilder();
+        System.out.println("075 : kThSmallestElementBST::element: "
+                + KthSmallestElementBST.kthSmallest(bst.getRoot(), 3));
     }
 
     public static BinaryTree binaryTreeBuilder() {
