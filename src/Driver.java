@@ -28,7 +28,7 @@ public class Driver {
         /* Valid Anagram: https://leetcode.com/problems/valid-anagram/ */
         validAnagram();
 
-        /* Binary Search: https://leetcode.com/problems/binary-search/ */
+        /* 704. Binary Search: https://leetcode.com/problems/binary-search/ */
         binarySearch();
 
         /* Invert Binary Tree: https://leetcode.com/problems/invert-binary-tree/ */
