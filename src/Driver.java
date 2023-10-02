@@ -229,6 +229,9 @@ public class Driver {
         /* 230. Kth Smallest Element in a BST: https://leetcode.com/problems/kth-smallest-element-in-a-bst/ */
         kThSmallestElementBST();
 
+        /* 133. Clone Graph */
+        cloneGraph();
+
     }
 
     public static void twoSum() {
@@ -684,6 +687,13 @@ public class Driver {
                 + KthSmallestElementBST.kthSmallest(bst.getRoot(), 3));
     }
 
+    public static void cloneGraph() {
+        Vertex v1 = graphBuilder();
+        Vertex cloned = CloneGraph.cloneGraph(v1);
+        System.out.print("076 : cloneGraph::clonedNode: ");
+        Vertex.printGraph(cloned);
+    }
+
     public static BinaryTree binaryTreeBuilder() {
         BinaryTree tree = new BinaryTree();
         tree.root = new BinaryTreeNode(1);
@@ -719,6 +729,26 @@ public class Driver {
         tree.root.right.right = new BinaryTreeNode(9);
 
         return tree;
+    }
+
+    public static Vertex graphBuilder() {
+        // Create nodes
+        Vertex node1 = new Vertex(1);
+        Vertex node2 = new Vertex(2);
+        Vertex node3 = new Vertex(3);
+        Vertex node4 = new Vertex(4);
+
+        // Build the graph using the provided adjacency list
+        node1.neighbors.add(node2);
+        node1.neighbors.add(node4);
+        node2.neighbors.add(node1);
+        node2.neighbors.add(node3);
+        node3.neighbors.add(node2);
+        node3.neighbors.add(node4);
+        node4.neighbors.add(node1);
+        node4.neighbors.add(node3);
+
+        return node1;
     }
 
 }
