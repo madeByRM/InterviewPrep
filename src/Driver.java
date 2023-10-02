@@ -232,6 +232,9 @@ public class Driver {
         /* 133. Clone Graph */
         cloneGraph();
 
+        /* 695. Max Area of Island */
+        maxAreaOfIsland();
+
     }
 
     public static void twoSum() {
@@ -503,8 +506,8 @@ public class Driver {
                 {'1', '1', '0', '0', '0'},
                 {'0', '0', '1', '0', '0'},
                 {'0', '0', '0', '1', '1'}};
-        System.out.println("045 : numberOfIslands::islands: " +
-                NumberOfIslands.numIslands(inputArray));
+        System.out.println("045 : numberOfIslands::islands: " + NumberOfIslands.numIslands(inputArray)
+                + " BFS::islands: " + NumberOfIslands.numOfIslandsBFS(inputArray));
     }
 
     public static void meetingRoomsII() {
@@ -692,6 +695,21 @@ public class Driver {
         Vertex cloned = CloneGraph.cloneGraph(v1);
         System.out.print("076 : cloneGraph::clonedNode: ");
         Vertex.printGraph(cloned);
+        System.out.println();
+    }
+
+    public static void maxAreaOfIsland() {
+        int[][] matrix = new int[][]{
+                {0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
+                {0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},
+                {0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0},
+                {0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0}};
+        System.out.println("077 : maxAreaOfIsland::maxArea: " + MaxAreaOfIsland.maxAreaOfIsland(matrix)
+                + " DFS::maxArea: " + MaxAreaOfIsland.maxAreaOfIslandDFS(matrix));
     }
 
     public static BinaryTree binaryTreeBuilder() {

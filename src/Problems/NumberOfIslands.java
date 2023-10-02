@@ -4,6 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class NumberOfIslands {
+    private static boolean[][] visited;
     public static int numIslands(char[][] grid) {
         int numOfIslands = 0;
 
@@ -14,9 +15,11 @@ public class NumberOfIslands {
         int numRows = grid.length;
         int numCols = grid[0].length;
 
+        visited = new boolean[numRows][numCols];
+
         for (int row = 0; row < numRows; row++) {
             for (int col = 0; col < numCols; col++) {
-                if (grid[row][col] == '1') {
+                if (grid[row][col] == '1' && !visited[row][col]) {
                     numOfIslands++;
                     dfs(grid, row, col, numRows, numCols);
                 }
@@ -26,10 +29,10 @@ public class NumberOfIslands {
     }
 
     private static void dfs(char[][] grid, int row, int col, int numRow, int numCol) {
-        if (row < 0 || col < 0 || row >= numRow || col >= numCol || grid[row][col] == '0') {
+        if (row < 0 || col < 0 || row >= numRow || col >= numCol || grid[row][col] != '1' || visited[row][col]) {
             return;
         }
-        grid[row][col] = '0';
+        visited[row][col] = true;
         dfs(grid, row - 1, col, numRow, numCol);
         dfs(grid, row + 1, col, numRow, numCol);
         dfs(grid, row, col - 1, numRow, numCol);
