@@ -6,14 +6,14 @@ public class Vertex {
     public int val;
     public List<Vertex> neighbors;
 
-    public Vertex() {
-        val = 0;
-        neighbors = new ArrayList<Vertex>();
-    }
+//    public Vertex() {
+//        val = 0;
+//        neighbors = new ArrayList<>();
+//    }
 
     public Vertex(int _val) {
         val = _val;
-        neighbors = new ArrayList<Vertex>();
+        neighbors = new ArrayList<>();
     }
 
     public Vertex(int _val, ArrayList<Vertex> _neighbors) {

@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CloneGraph {
-    private static Map<Vertex, Vertex> visited = new HashMap<>();
+    private static final Map<Vertex, Vertex> visited = new HashMap<>();
     public static Vertex cloneGraph(Vertex node) {
        if (node == null) {
            return node;
