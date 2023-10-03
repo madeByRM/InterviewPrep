@@ -229,11 +229,14 @@ public class Driver {
         /* 230. Kth Smallest Element in a BST: https://leetcode.com/problems/kth-smallest-element-in-a-bst/ */
         kThSmallestElementBST();
 
-        /* 133. Clone Graph */
+        /* 133. Clone Graph: https://leetcode.com/problems/clone-graph/ */
         cloneGraph();
 
-        /* 695. Max Area of Island */
+        /* 695. Max Area of Island: https://leetcode.com/problems/max-area-of-island/ */
         maxAreaOfIsland();
+
+        /* 208. Implement Trie (Prefix Tree): https://leetcode.com/problems/implement-trie-prefix-tree/ */
+        implementTrie();
 
     }
 
@@ -710,6 +713,17 @@ public class Driver {
                 {0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0}};
         System.out.println("077 : maxAreaOfIsland::maxArea: " + MaxAreaOfIsland.maxAreaOfIsland(matrix)
                 + " DFS::maxArea: " + MaxAreaOfIsland.maxAreaOfIslandDFS(matrix));
+    }
+
+    private static void implementTrie() {
+        Trie trie = new Trie();
+        trie.insert("apple");
+        trie.search("apple");   // return True
+        trie.search("app");     // return False
+        trie.startsWith("app");       // return True
+        trie.insert("app");
+        trie.search("app");     // return True
+        System.out.println("078 : implementTrie::worked: " + trie.startsWith("app"));
     }
 
     public static BinaryTree binaryTreeBuilder() {
