@@ -22,7 +22,7 @@ public class FindInRotatedSortedArray {
             */
             // Case 2: sub-array on mid's left is sorted
             else if (nums[mid] >= nums[left]) {
-                if (target >= nums[left] && target < nums[mid]) {
+                if (nums[left] <= target && target < nums[mid]) {
                     right = mid - 1;
                 } else {
                     left = mid + 1;

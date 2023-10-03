@@ -17,7 +17,7 @@ public class LongestAbsoluteFilePath {
 
         for (String line : lines) {
             // Count the number of leading tabs
-            // lastIndexOf returns last index of character \t
+            // lastIndexOf returns last index of character \t (\t is considered as a one character)
             // depth is calculated as the num of tabs + 1
             int depth = line.lastIndexOf('\t') + 1;
 

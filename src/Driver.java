@@ -16,31 +16,31 @@ public class Driver {
         /* 217. Contains Duplicate: https://leetcode.com/problems/contains-duplicate/ */
         containsDuplicate();
 
-        /* Merge Two Sorted Lists: https://leetcode.com/problems/merge-two-sorted-lists/ */
+        /* 21. Merge Two Sorted Lists: https://leetcode.com/problems/merge-two-sorted-lists/ */
         mergeTwoSortedLists();
 
-        /* Best Time to Buy and Sell Stock: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/ */
+        /* 121. Best Time to Buy and Sell Stock: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/ */
         bestTimeToBuySellStock();
 
-        /* Valid Palindrome: https://leetcode.com/problems/valid-palindrome/ */
+        /* 125. Valid Palindrome: https://leetcode.com/problems/valid-palindrome/ */
         validPalindrome();
 
-        /* Valid Anagram: https://leetcode.com/problems/valid-anagram/ */
+        /* 242. Valid Anagram: https://leetcode.com/problems/valid-anagram/ */
         validAnagram();
 
         /* 704. Binary Search: https://leetcode.com/problems/binary-search/ */
         binarySearch();
 
-        /* Invert Binary Tree: https://leetcode.com/problems/invert-binary-tree/ */
+        /* 226. Invert Binary Tree: https://leetcode.com/problems/invert-binary-tree/ */
         invertBinaryTree();
 
         /* 110. Balanced Binary Tree: https://leetcode.com/problems/balanced-binary-tree/ */
         balancedBinaryTree();
 
-        /* Decode String: https://leetcode.com/problems/decode-string/ */
+        /* 394. Decode String: https://leetcode.com/problems/decode-string/ */
         decodeString();
 
-        /* Remove Duplicate From Sorted Linked List: Cracking the coding interview book */
+        /* 83. Remove Duplicates from Sorted List: https://leetcode.com/problems/remove-duplicates-from-sorted-list/ */
         removeDuplicateFromSortedLL();
 
         /* 19. Remove Nth Node From End of List: https://leetcode.com/problems/remove-nth-node-from-end-of-list/ */
@@ -312,7 +312,7 @@ public class Driver {
 
     public static void removeDuplicateFromSortedLL() {
         CustomLinkedList<Integer> list = linkedListBuilder(new int[]{1, 2, 4, 4, 5, 6, 6});
-        RemoveDuplicatesLL.removeDuplicatesFromUnsortedLinkedList(list.getHead());
+        RemoveDuplicatesLL.removeDuplicatesFromUnsortedLlWithoutBuffer(list.getHead());
         System.out.print("013 : removeDuplicateFromSortedLL::New List: ");
         LinkedListNode<Integer> newHead = list.getHead();
         newHead.printListFromNode(newHead);

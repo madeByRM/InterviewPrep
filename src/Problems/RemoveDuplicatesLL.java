@@ -22,16 +22,13 @@ public class RemoveDuplicatesLL {
 
     public static void removeDuplicatesFromUnsortedLlWithoutBuffer(LinkedListNode<Integer> head) {
         LinkedListNode<Integer> curr = head;
-        while (curr != null) {
-            LinkedListNode<Integer> fast = curr;
-            while (fast.next != null) {
-                if (fast.next.value == curr.value) {
-                    fast.next = fast.next.next;
-                } else {
-                    fast = fast.next;
-                }
+
+        while (curr != null && curr.next != null) {
+            if (curr.value == curr.next.value) {
+                curr.next = curr.next.next;
+            } else {
+                curr = curr.next;
             }
-            curr = curr.next;
         }
     }
 }

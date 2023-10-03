@@ -4,29 +4,36 @@ import Helper.LinkedListNode;
 
 public class PalindromeLinkedList {
     public static boolean isPalindromeLL(LinkedListNode<Integer> head) {
-        LinkedListNode<Integer> reversed = reverseAndClone(head);
-        return isEqual(head, reversed);
-    }
+        LinkedListNode<Integer> slow = head;
+        LinkedListNode<Integer> fast = head;
 
-    private static LinkedListNode<Integer> reverseAndClone(LinkedListNode<Integer> head) {
-        LinkedListNode<Integer> newHead = null;
-        while (head != null) {
-            LinkedListNode<Integer> n = new LinkedListNode<>(head.value);
-            n.next = newHead;
-            newHead = n;
-            head = head.next;
+        // finding middle of the list
+        while (fast != null  && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
         }
-        return newHead;
-    }
 
-    private static boolean isEqual(LinkedListNode<Integer> one, LinkedListNode<Integer> two) {
-        while (one != null && two != null) {
-            if (one.value != two.value) {
+        // reverse second half of the list
+        LinkedListNode<Integer> secondHalf = reverse(slow);
+
+        while (secondHalf != null && head != null) {
+            if (head.value != secondHalf.value) {
                 return false;
             }
-            one = one.next;
-            two = two.next;
+            head = head.next;
+            secondHalf = secondHalf.next;
         }
-        return one == null && two == null;
+        return true;
+    }
+
+    private static LinkedListNode<Integer> reverse(LinkedListNode<Integer> head) {
+        LinkedListNode<Integer> prev = null;
+        while (head != null) {
+            LinkedListNode<Integer> next = head.next;
+            head.next = prev;
+            prev = head;
+            head = next;
+        }
+        return prev;
     }
 }
