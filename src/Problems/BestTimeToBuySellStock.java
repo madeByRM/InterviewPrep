@@ -3,8 +3,8 @@ package Problems;
 public class BestTimeToBuySellStock {
     public int maxProfitBruteForce(int[] prices) {
         int maxProfit = Integer.MIN_VALUE;
-        for (int i=0; i < prices.length; i++) {
-            for (int j = prices.length-1; j > i; j--) {
+        for (int i = 0; i < prices.length; i++) {
+            for (int j = i + 1; j < prices.length; j++) {
                 int prof = prices[j] - prices[i];
                 if (maxProfit < prof) {
                     maxProfit = prof;
@@ -23,17 +23,15 @@ public class BestTimeToBuySellStock {
     Time complexity: O(n)
      */
     public int maxProfitOptimized(int[] prices) {
-        int maxProfit = Integer.MIN_VALUE;
+        int maxProfit = 0;
         int minPrice = Integer.MAX_VALUE;
-        for (int i = 0; i < prices.length; i++) {
-            if (minPrice > prices[i]) {
-                minPrice = prices[i];
-            } else if ((prices[i] - minPrice) > maxProfit) {
-                maxProfit = prices[i] - minPrice;
+        for (int price : prices) {
+            if (price < minPrice) {
+                minPrice = price;
+            } else {
+                int profit = price - minPrice;
+                maxProfit = Math.max(maxProfit, profit);
             }
-        }
-        if (maxProfit < 0) {
-            maxProfit = 0;
         }
         return maxProfit;
     }
