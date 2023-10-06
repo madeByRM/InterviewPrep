@@ -6,6 +6,7 @@ public class GroupAnagrams {
     public static List<List<String>> group(String[] strs) {
         Map<String, List<String>> anagramMap = new HashMap<>();
 
+        // sort word and use it as key for hashmap i.e. Map<SortedWord, List<Words>>
         for (String s : strs) {
             char[] chars = s.toCharArray();
             Arrays.sort(chars);

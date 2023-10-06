@@ -241,6 +241,9 @@ public class Driver {
         /* 417. Pacific Atlantic Water Flow: https://leetcode.com/problems/pacific-atlantic-water-flow/ */
         pacificAtlanticWaterFlow();
 
+        /* 48. Rotate Image: https://leetcode.com/problems/rotate-image/ */
+        rotateImage();
+
     }
 
     public static void twoSum() {
@@ -459,7 +462,7 @@ public class Driver {
 
     public static void productExceptSelf() {
         System.out.println("034 : productExceptSelf::productArray: " +
-                Arrays.toString(ProductExceptSelf.productExceptSelfSpaceOptimized(new int[]{1, 2, 3, 4})));
+                Arrays.toString(ProductExceptSelf.productExceptSelf(new int[]{1, 2, 3, 4})));
     }
 
     public static void maxSubArray() {
@@ -740,6 +743,19 @@ public class Driver {
         System.out.println("079 : pacificAtlanticWaterFlow::cells: " + WaterFlow.pacificAtlantic(island));
     }
 
+    private static void rotateImage() {
+        int[][] matrix = new int[][] {
+                { 1,  2,  3,  4,  5},
+                { 6,  7,  8,  9, 10},
+                {11, 12, 13, 14, 15},
+                {16, 17, 18, 19, 20},
+                {21, 22, 23, 24, 25},
+        };
+        RotateImage.rotate(matrix);
+        System.out.println("080 : rotateImage::rotated: ");
+        printMatrix(matrix);
+    }
+
     public static BinaryTree binaryTreeBuilder() {
         BinaryTree tree = new BinaryTree();
         tree.root = new BinaryTreeNode(1);
@@ -797,4 +813,12 @@ public class Driver {
         return node1;
     }
 
+    public static void printMatrix(int[][] matrix) {
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[0].length; j++) {
+                System.out.print(String.format("%2d ", matrix[i][j]));
+            }
+            System.out.println();
+        }
+    }
 }
